@@ -511,8 +511,8 @@ body{
   }
 
   .faq-item.active .faq-answer {
-    padding: 10px 20px 30px;
-    padding-bottom: 10vh;
+    padding: 0px 20px 0px;
+    padding-bottom: 15vh;
   }
 }
 
@@ -736,4 +736,5 @@ body{
 }
 footer:hover{
   background-color: #000000 !important;
+
 }
