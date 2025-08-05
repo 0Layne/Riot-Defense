@@ -738,7 +738,7 @@ body{
   right: 10%;
   width: 20%;
   overflow: hidden;
-  z-index: 3;
+  z-index: 3 !important;
   transform: translateX(20%);
   z-index: 100;
 }
@@ -1232,6 +1232,7 @@ body{
     font-size: 1.2rem;
   }
 }
+
 
 
 
