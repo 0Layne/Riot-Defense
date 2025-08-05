@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Riot Defense</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Riot Defense" />
+    <link rel="manifest" href="favicon//site.webmanifest" />
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<!-- Header -->
+<header class="header transparent" id="main-header">
+    <a href="#" class="header__logo">
+      <img src="photo/riot-logo-white.png" alt="Riot Logo" class="logo-mobile">
+    </a>
+
+    <ion-icon name="menu-outline" class="header__toggle" id="nav-toggle"></ion-icon>
+
+    <nav class="nav" id="nav-menu">
+      <div class="nav__content bd-grid">
+
+        <ion-icon name="close-outline" class="nav__close" id="nav-close"></ion-icon>
+
+        <div class="header-left">
+          <img src="photo/riot-logo-shield-white.svg" alt="Riot Logo" class="logo" />
+          <ul class="nav__list">
+            <li class="nav__item"><a href="index.html" class="nav__link navbar-link active">Home</a></li>
+            <li class="nav__item"><a href="index.html#service" class="nav__link navbar-link">Film</a></li>
+            <li class="nav__item"><a href="contact.html" class="nav__link navbar-link">Customers</a></li>
+            <li class="nav__item"><a href="contact.html#faq" target="_blank" class="nav__link navbar-link">FAQ</a></li>
+            <li class="nav__item"><a href="contact.html#contact" target="_blank" class="nav__link navbar-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-social-wrapper">
+          <div class="socials-header">
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-solid fa-phone"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-google"></i></a>
+            <a href="https://www.instagram.com/new_image_az/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          </div>
+          <div class="cta-button-anim">
+          <a href="contact.html#contact" target="_blank" class="cta">Get a Quote →</a>
+          </div>
+        </div>
+        
+      </div>
+    </nav>
+  </header>
+
+
+
+  
+<section class="hero-section">
+  <div class="hero-left">
+    <h1 class="hero-title title-animate">RIOT<span class="line-target"> DEFENSE Protects</span></h1>
+    <p id="hero-text" class="title-animate">This is some short dummy description text that goes here 1234. This is some short dummy description text that goes here 1234.</p>
+    <div class="hero-buttons title-animate">
+      <a href="contact.html#contact" target="_blank" class="btn quote">Get a Quote →</a>
+      <a href="index.html#service" class="btn learn">Learn more</a>
+    </div>
+  </div>
+  <div class="hero-right">
+
+  </div>
+</section>
+    <!--scroll down arrow-->
+  <div class="section-border">
+    <div class="scroll-arrow" onclick="scrollToSection('scrolltome')">
+      <i class="fa-solid fa-arrow-down"></i>
+    </div>
+    </div>
+
+
+
+
+<!--out servies-->
+<section class="custom-section" id="service">
+  <div class="top-row">
+    <h1 class="section-title scroll-animate scroll-animateR">Section 1</h1>
+    <div class="description-box scrolltome scroll-animateY">
+      <p>This is some short dummy description text that goes here 1234. This is some short dummy description text that goes here 1234. This is some short dummy description text that goes here.</p>
+      <div class="button-group">
+        <a href="#" class="work-btn-contact">Contact →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-containers bottom-containers1">
+    <div class="container box1">
+      <span class="work-icon"><i class="fa-solid fa-building"></i></span>
+      <h2>Container 1</h2>
+      <p>This is some short dummy description text that goes here 1234. This is some short dummy description text that goes here.</p>
+    </div>
+    <div class="container box2">
+      <span class="work-icon"><i class="fa-solid fa-house"></i></span>
+      <h2>Container 2</h2>
+      <p>This is some short dummy description text that goes here 1234. This is some short dummy description text that goes here.</p>
+    </div>
+    <div class="container box3">
+      <span class="work-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+      <h2>Container 3</h2>
+      <p>This is some short dummy description text that goes here 1234. This is some short dummy description text that goes here.</p>
+    </div>
+  </div>
+
+    <div class="bottom-containers">
+    <div class="container box1">
+      <span class="work-icon"><i class="fa-solid fa-file"></i></i></span>
+      <h2>Container 4</h2>
+      <p>This is some short dummy description text that goes here 1234. This is some short dummy description text that goes here.</p>
+    </div>
+    <div class="container box2">
+      <span class="work-icon"><i class="fa-solid fa-calendar"></i></span>
+      <h2>Container 5</h2>
+      <p>This is some short dummy description text that goes here 1234. This is some short dummy description text that goes here.</p>
+    </div>
+    <div class="container box3">
+      <span class="work-icon"><i class="fa-solid fa-truck"></i></span>
+      <h2>Container 6</h2>
+      <p>This is some short dummy description text that goes here 1234. This is some short dummy description text that goes here.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!--showcase-->
+<div id="section-1">
+  <div class="section-1 scroll-animateY">
+  <h1>Section2</h1>
+  <hr>
+  <h2>This is some short dummy</h2>
+  </div>
+  <div class="section-1-img">
+    <img src="photo/pexels-heyho-7031622.jpg" alt="First Line of Defense Image">
+  </div>
+</div>
+
+
+
+
+
+<!--about us-->
+  <section class="stats-hero" id="stat">
+  <div class="stats-left">
+    <div class="stats-container">
+      <div class="stat-item scroll-animate scroll-animateR">
+        <h2>340+</h2>
+        <p>Successful projects</p>
+      </div>
+      <div class="stat-item scroll-animate scroll-animateR">
+        <h2>144+</h2>
+        <p>Continued engagement</p>
+      </div>
+      <div class="stat-item scroll-animate scroll-animateR">
+        <h2>5+</h2>
+        <p>Years of expertise</p>
+    </div>
+    </div>
+  </div>
+
+  <div class="stats-image">
+    <img src="photo/pexels-vardarious-17584060.jpg" alt="Modern kitchen">
+  </div>
+
+  <div class="stats-text scroll-animateY">
+    <h1>Section 3 <br>  description text that goes here.</h1>
+    <p>This is some short dummy description text that goes here 1234. This is some short dummy description text that goes here.</p>
+    <div class="stats-buttons">
+      <a href="#" class="stat-btn-1">Lets Chat →</a>
+      <a href="#" class="stat-btn-2">Learn more</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!--Process-->
+<section class="grid-section" id="process">
+  <!-- Row 1 -->
+  <div class="grid-item text scroll-animate scroll-animateR">
+    <h2>Section 4 box 1</h2>
+    <p>This is some short dummy description text that goes here 1234. This is some short dummy description text that goes here 1234.</p>
+  </div>
+  <div class="grid-item image">
+    <img src="photo/pexels-fotografiagmazg-10043067.jpg" alt="Image 1">
+  </div>
+
+  <!-- Row 2 (Reversed) -->
+  <div class="grid-item image">
+    <img src="photo/pexels-tranmautritam-18177056.jpg" alt="Image 2">
+  </div>
+  <div class="grid-item text scroll-animateY">
+    <h2>Section 4 box 2</h2>
+    <p>This is some short dummy description text that goes here 1234. This is some short dummy description text that goes here 1234.</p>
+  </div>
+
+  <!-- Row 3 -->
+  <div class="grid-item text scroll-animate scroll-animateR">
+    <h2>Section 4 box 3</h2>
+    <p>This is some short dummy description text that goes here 1234. This is some short dummy description text that goes here 1234.</p>
+  </div>
+  <div class="grid-item image">
+    <img src="photo/pexels-alex-cooper-358580-972845.jpg" alt="Image 3">
+  </div>
+</section>
+
+
+
+
+
+
+
+<!--quote section-->
+<section class="quote-section">
+  <div class="quote-container">
+    <h1 class="quote-title scroll-animate scroll-animateR">Get Your Project Started Today</h1>
+
+    <div class="quote-bottom-row">
+      <div class="quote-left-buttons scroll-animate scroll-animateR">
+      <a href="#" class="stat-btn-1">Lets Chat →</a>
+      <a href="#" class="stat-btn-2">Learn more</a>
+      </div>
+
+      <div class="quote-right-info scroll-animateY">
+        <p class="quote-description">This is some short dummy description text that goes here 1234.This is some short dummy description text that goes here 1234.This is some short dummy description text that goes here 1234.</p>
+        <div class="quote-social-row">
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-solid fa-phone" style="color: black;"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-google" style="color: black;"></i></a>
+            <a href="https://www.instagram.com/new_image_az/" target="_blank"><i class="fa-brands fa-instagram" style="color: black;"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook" style="color: black;"></i></a>
+          <span class="quote-email">info@example.com</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<div class="back-to-top" onclick="scrollToTop()">
+  <i class="fa-solid fa-arrow-up"></i>
+</div>
+
+
+
+
+
+<!-- Footer -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col scroll-animate scroll-animateR">
+      <div class="footer-logo "><img src="photo/riot-logo-white.png" alt="WestCraft Logo"></div>
+      <p class="copyright-footer">&copy; 2025 RiotDefense. All rights reserved.</p>
+    </div>
+    <div class="footer-col footer-col-social scroll-animate scroll-animateR">
+      <h4>Social</h4>
+      <hr class="footer-title-line">
+    <div class="socials">
+        <a href="https://www.facebook.com" target="_blank"><i class="fa-solid fa-phone"></i></a>
+        <span class="footer-dash">|</span>
+        <a href="https://www.facebook.com" target="_blank"><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-google"></i></a></a>
+        <span class="footer-dash">|</span>
+        <a href="https://www.instagram.com/new_image_az/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <span class="footer-dash">|</span>
+        <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    </div>
+    </div>
+    <div class="footer-col scroll-animateY">
+      <h4>Contact Info</h4>
+      <hr class="footer-title-line">
+      <p>Email: example@example.com</p>
+    </div>
+    <div class="footer-col scroll-animateY">
+      <h4>Riot Defense</h4>
+      <hr class="footer-title-line">
+      <p class="footer-disclaimer">Powered by Riot Defense — This is some short dummy description text that goes here 1234.This is some short dummy description text that goes here 1234.</p>
+    </div>
+  <!-- FOOTER LEGAL ROW -->
+  <div class="footer-legal-container scroll-animateY">
+    <div class="footer-legal-links">
+      <a href="term.html" target="_blank">Terms</a>
+      <a href="privacy.html" target="_blank">Privacy</a>
+      <a href="legal.html" target="_blank">Legal</a>
+    </div>
+  </div>
+  </div>
+</footer>
+
+
+
+
+  <!--header-->
+  <script>
+    const header = document.getElementById("main-header");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        header.classList.remove("transparent");
+        header.classList.add("scrolled");
+      } else {
+        header.classList.add("transparent");
+        header.classList.remove("scrolled");
+      }
+    });
+  </script>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+
+  <script></script>
+
+
+  <script>AOS.init();</script>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Riot Defense | Terms Page</title>
+
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="legal.css">
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Riot Defense" />
+    <link rel="manifest" href="favicon//site.webmanifest" />
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<!-- Header -->
+<header class="header transparent" id="main-header">
+    <a href="#" class="header__logo">
+      <img src="photo/riot-logo-white.png" alt="Riot Logo" class="logo-mobile">
+    </a>
+
+    <ion-icon name="menu-outline" class="header__toggle" id="nav-toggle"></ion-icon>
+
+    <nav class="nav" id="nav-menu">
+      <div class="nav__content bd-grid">
+
+        <ion-icon name="close-outline" class="nav__close" id="nav-close"></ion-icon>
+
+        <div class="header-left">
+          <img src="photo/riot-logo-shield-white.svg" alt="Riot Logo" class="logo" />
+          <ul class="nav__list">
+            <li class="nav__item"><a href="index.html" class="nav__link navbar-link active">Home</a></li>
+            <li class="nav__item"><a href="index.html#service" class="nav__link navbar-link">Film</a></li>
+            <li class="nav__item"><a href="contact.html" class="nav__link navbar-link">Customers</a></li>
+            <li class="nav__item"><a href="contact.html#faq" target="_blank" class="nav__link navbar-link">FAQ</a></li>
+            <li class="nav__item"><a href="contact.html#contact" target="_blank" class="nav__link navbar-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-social-wrapper">
+          <div class="socials-header">
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-solid fa-phone"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-google"></i></a>
+            <a href="https://www.instagram.com/new_image_az/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          </div>
+          <div class="cta-button-anim">
+          <a href="contact.html#contact" target="_blank" class="cta">Get a Quote →</a>
+          </div>
+        </div>
+        
+      </div>
+    </nav>
+  </header>
+
+
+
+
+<main class="legal-wrapper hero-section">
+<section class="legal-page">
+<div class="legal-cont">
+  <h1>Legal Disclaimer</h1>
+  <p>All content provided on this website is for informational purposes only. RiotDefense makes no representations as to the accuracy or completeness of any information on this site or found by following any link on this site.</p>
+  <p>RiotDefense will not be liable for any errors or omissions in this information nor for the availability of this information. RiotDefense will not be liable for any losses, injuries, or damages from the display or use of this information.</p>
+  <p>All products and services are provided “as-is” without warranties of any kind, either express or implied. It is the responsibility of the property owner to comply with local laws and ordinances regarding the use of safety or security window film products.</p>
+  <p>By using this website and/or any RiotDefense services, you accept this disclaimer in full. If you disagree with any part of this disclaimer, do not use our website, products, or services.</p>
+</div>
+</section>
+</main>
+
+
+
+
+
+<!--header-->
+  <script>
+    const header = document.getElementById("main-header");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        header.classList.remove("transparent");
+        header.classList.add("scrolled");
+      } else {
+        header.classList.add("transparent");
+        header.classList.remove("scrolled");
+      }
+    });
+  </script>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+
+  <script>AOS.init();</script>
+
+
+  <script src="script.js"></script>  
+  </body>
+  </html>
