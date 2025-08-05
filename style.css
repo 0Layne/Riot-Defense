@@ -601,6 +601,7 @@ body{
     padding: 0px;
     margin: 0 auto;
     padding: 2vh;
+    width: 100%;
   }
 }
 
@@ -1231,6 +1232,7 @@ body{
     font-size: 1.2rem;
   }
 }
+
 
 
 
