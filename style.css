@@ -588,6 +588,12 @@ body{
     height: 30vh;
     top: 0 !important;
   }
+    .container p{
+    text-align: center;
+    padding: 0px;
+    margin: 0 auto;
+    padding: 2vh;
+  }
 }
 @media (max-height: 700px){
   .container p{
@@ -1225,5 +1231,6 @@ body{
     font-size: 1.2rem;
   }
 }
+
 
 
