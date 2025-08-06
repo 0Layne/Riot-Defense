@@ -245,6 +245,32 @@ body{
   line-height: 1.4;
 }
 
+@media screen and (max-width: 900px){
+    .scroll-arrow {
+    font-size: 1.3rem;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    position: absolute;
+    right: 40%;
+    bottom: 45%;
+    transform: translateX(-50%);
+    width: 85px;
+    height: 85px;
+    background: transparent;
+    border-radius: 50%;
+    border: solid 1px rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bounce 1.5s infinite;
+    z-index: 90;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  .testimonial-boxes{
+    padding-top: 10vh;
+    }
+}
+
 @media screen and (max-width: 900px) {
   .testimonial-title {
     font-size: 4.5rem;
@@ -360,7 +386,7 @@ body{
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.831);
-  z-index: 100;
+  z-index: 1;
 }
 
 .faq-section {
@@ -380,7 +406,7 @@ body{
   margin: 0 auto;
   object-fit: cover;
   display: block;
-  z-index: 100;
+  z-index: 2;
 }
 
 
@@ -736,6 +762,4 @@ body{
 }
 footer:hover{
   background-color: #000000 !important;
-
 }
-
