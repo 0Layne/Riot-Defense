@@ -241,17 +241,20 @@ img {
     display: flex;
     align-items: end;
     gap: 1rem;
+    z-index: 1100 !important;
   }
 
   .socials-header a {
     font-size: 1.4rem;
     color: white;
+    z-index: 1000 !important;
   }
 
   .cta-button-anim {
     position: relative;
     top: 20vh !important;
     left: 5%;
+    z-index: 1000 !important;
   }
 
   .cta {
@@ -374,25 +377,6 @@ img {
     gap: 2rem;
     /* or whatever your spacing is */
   }
-  .socials-header {
-    position: relative;
-    top: 35vh;
-    left: 5%;
-    display: flex;
-    align-items: end;
-    gap: 1rem;
-  }
-    .cta-button-anim {
-    position: relative;
-    top: 15vh;
-    left: 5%;
-  }
-  .logo-mobile{
-    height: 60px !important;
-  }
-
-}
-@media screen and (max-width: 768px){
     .socials-header {
     position: relative;
     top: 35vh;
@@ -403,10 +387,15 @@ img {
   }
     .cta-button-anim {
     position: relative;
-    top: 15vh;
+    top: 17vh !important;
     left: 8%;
   }
+  .logo-mobile{
+    height: 60px !important;
+  }
+
 }
+
 
 
 
