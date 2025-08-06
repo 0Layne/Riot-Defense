@@ -156,7 +156,7 @@ img {
     height: 100vh;
     background-image: url(photo/testimonial-bg.jpg);
     background-size: cover;
-  background-position: center;
+    background-position: center;
     color: white;
     z-index: 999;
     transition: 0.5s;
@@ -216,6 +216,7 @@ img {
     padding: 0;
     margin-top: 2vh;
     margin-bottom: 2vh;
+    z-index: 1000;
   }
 
   .nav__item {
@@ -249,7 +250,7 @@ img {
 
   .cta-button-anim {
     position: relative;
-    top: 20vh;
+    top: 20vh !important;
     left: 5%;
   }
 
