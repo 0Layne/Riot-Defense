@@ -232,11 +232,13 @@ body{
     transform: translateX(-50%) translateY(-5px);
   }
 }
+
+
 @media (max-width: 900px) {
   .hero-section {
     flex-direction: column;
     overflow-x: hidden;
-    padding-top: 15vh;
+    padding-top: 10vh;
   }
 
   .hero-left {
@@ -507,6 +509,7 @@ body{
 @media (max-width: 900px) {
   .custom-section{
     height: 100%;
+    padding-bottom: 10vh;
   }
   .bottom-containers {
     flex-direction: column;
@@ -517,7 +520,8 @@ body{
     width: 100%;
     margin-bottom: 3vh;
     top: 0 !important;
-    height: auto;
+    height: 100%;
+    padding-bottom: 20vh;
   }
 
   .box2, .box3 {
@@ -528,28 +532,38 @@ body{
     max-width: 100%;
     margin: 0 auto;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 7rem;
   }
 
   .section-title {
-    font-size: 2.5rem;
+    font-size: 4.5rem;
     text-align: center;
     margin: 0 auto;
   }
-  .work-icon {
+.work-icon{
   position: absolute;
   top: 5%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 45%;
+  width: 80px;
+  height: 80px;
+  background-color: #000000;
+  border-radius: 50px;
+}
+.work-icon i{
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
 }
 .container h2{
   position: absolute;
   top: 30%;
+  margin-top: 1vh;
 }
 .container p{
   position: absolute;
   top: 50%;
-  padding-bottom: 2vh;
+  width: 70%;
+  text-align: center;
+  margin-top: 1vh;
 }
 }
 
@@ -588,13 +602,8 @@ body{
     height: 30vh;
     top: 0 !important;
   }
-    .container p{
-    text-align: center;
-    padding: 0px;
-    margin: 0 auto;
-    padding: 2vh;
-  }
 }
+
 @media (max-height: 700px){
   .container p{
     text-align: center;
@@ -642,6 +651,15 @@ body{
   max-width: 95%;
   margin: 0 auto;
 }
+
+@media (max-width: 900px) {
+  #section-1{
+  margin: 1vh;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+}
+
 @media (max-width: 768px) {
   #section-1{
   margin: 0px auto;
@@ -739,7 +757,6 @@ body{
   width: 20%;
   overflow: hidden;
   z-index: 3 !important;
-  transform: translateX(20%);
   z-index: 100;
 }
 
@@ -799,7 +816,6 @@ body{
     width: 20%;
     overflow: hidden;
     z-index: 3;
-    transform: translateX(20%);
     z-index: 100;
 }
   .stats-text h1 {
@@ -892,7 +908,7 @@ body{
 @media (max-width: 900px) {
   .stats-hero{
     flex-direction: column;
-    margin-top: 15vh;
+    margin-top: 5vh;
   }
   .stats-left {
     padding: 1.5rem 1rem;
@@ -927,7 +943,6 @@ body{
     width: 80%;
     overflow: hidden;
     z-index: 3;
-    transform: translateX(20%);
     z-index: 100;
 }
   .stats-image img {
@@ -1232,8 +1247,3 @@ body{
     font-size: 1.2rem;
   }
 }
-
-
-
-
-
