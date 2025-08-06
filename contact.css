@@ -394,7 +394,7 @@ body{
   margin: 0 auto;
   padding-top: 2rem;
   padding-bottom: 10rem;
-  z-index: 100;
+  z-index: 2;
   position: relative;
   pointer-events: auto; /* Make FAQ section interactive */
 }
