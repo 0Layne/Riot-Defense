@@ -505,7 +505,7 @@ body{
 }
 
 /* Responsive */
-@media (max-width: 1200px) {
+@media (max-width: 1350px) {
   .work-icon{
   position: absolute;
   top: 5%;
@@ -517,9 +517,8 @@ body{
 }
 .container P{
   position: absolute;
-  top: 50%;
+  top: 55%;
   width: 95%;
-}
 }
 
 @media (max-width: 900px) {
@@ -1263,5 +1262,6 @@ body{
     font-size: 1.2rem;
   }
 }
+
 
 
