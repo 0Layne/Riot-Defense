@@ -440,7 +440,6 @@ body{
   left: 0%;
   width: 65px;
   height: 65px;
-  background-color: #000000;
   border-radius: 50px;
 }
 .work-icon i{
@@ -512,13 +511,13 @@ body{
   left: 40%;
   width: 65px;
   height: 65px;
-  background-color: #000000;
   border-radius: 50px;
 }
 .container P{
   position: absolute;
   top: 55%;
   width: 95%;
+}
 }
 
 @media (max-width: 900px) {
@@ -558,15 +557,14 @@ body{
 .work-icon{
   position: absolute;
   top: 5%;
-  left: 45%;
-  width: 80px;
-  height: 80px;
-  background-color: #000000;
+  left: 46%;
+  width: 65px;
+  height: 65px;
   border-radius: 50px;
 }
 .work-icon i{
   color: rgb(255, 255, 255);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .container h2{
   position: absolute;
@@ -617,9 +615,30 @@ body{
     height: 30vh;
     top: 0 !important;
   }
+  .work-icon{
+  position: absolute;
+  top: 5%;
+  left: 45%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
 }
-
-@media (max-height: 700px) and (min-width: 500px){
+.work-icon i{
+  color: rgb(255, 255, 255);
+  font-size: 1.3rem;
+}
+}
+@media (max-width: 500px) {
+  .work-icon{
+  position: absolute;
+  top: 5%;
+  left: 43%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+}
+@media (max-height: 700px) and (max-width: 500px){
   .container p{
     text-align: center;
     padding: 0px;
@@ -1262,6 +1281,3 @@ body{
     font-size: 1.2rem;
   }
 }
-
-
-
