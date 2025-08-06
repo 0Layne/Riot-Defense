@@ -508,7 +508,7 @@ body{
 @media (max-width: 1200px) {
   .work-icon{
   position: absolute;
-  top: 10%;
+  top: 5%;
   left: 40%;
   width: 65px;
   height: 65px;
@@ -620,7 +620,7 @@ body{
   }
 }
 
-@media (max-height: 700px){
+@media (max-height: 700px) and (min-width: 500px){
   .container p{
     text-align: center;
     padding: 0px;
@@ -1263,4 +1263,5 @@ body{
     font-size: 1.2rem;
   }
 }
+
 
