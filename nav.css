@@ -38,7 +38,6 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
-  color: rgb(255, 255, 255);
 }
 
 a {
@@ -77,12 +76,38 @@ img {
 }
 
 .header:hover {
-  background-color: #111;
+  background-color: #ffffff;
+}
+.header:hover .socials-header a{
+  color: #000;
+}
+.header--scrolled .socials-header a{
+  color: #000;
 }
 .header--scrolled {
-  background-color: #000000; /* changed to black */
+  background-color: #ffffff; /* changed to black */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+.header:hover .cta {
+  background: transparent;
+  color: rgb(255, 255, 255);
+  background-color: #000000;
+  border: none;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.5s ease;
+  display: inline-block;
+  font-weight: 500;
+}
+.header:hover .cta:hover {
+  background: transparent;
+  border: 0.5px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  transform: scale(1.02);
+}
+
+
 .header--fixed {
   position: fixed;
   top: 0;
@@ -418,9 +443,8 @@ img {
 
 
   .nav__link{
-
     font-size: 1.1rem;
-    color: white;
+    color: rgb(0, 0, 0);
     display: block;
   }
   .nav__link:hover{
@@ -486,9 +510,9 @@ img {
 }
 
 .cta:hover {
-  background: #111;
-  border: 0.5px solid rgb(255, 255, 255);
-  color: white;
+  background: transparent;
+  border: 0.5px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
   transform: scale(1.02);
 }
 .logo-menu{
@@ -1080,4 +1104,3 @@ padding-left: 10vh;
     font-size: 0.95rem;
   }
 }
-
