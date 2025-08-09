@@ -495,7 +495,7 @@ img {
   display: none;
 }
 .logo {
-  height: 70px !important;
+  height: 60px !important;
 }
 .logo-1 {
   height: 80px;
@@ -1080,3 +1080,4 @@ padding-left: 10vh;
     font-size: 0.95rem;
   }
 }
+
