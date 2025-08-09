@@ -101,7 +101,7 @@ body{
   inset: 0; /* fill the section */
   background: url(photo/riot-shield-logo.png) no-repeat center;
   background-size: 70%; /* adjust size */
-  background-position: left;
+  background-position: center;
   opacity: 0.02; /* watermark transparency */
   z-index: 1; /* behind text */
 }
@@ -1345,3 +1345,4 @@ body{
     font-size: 1.2rem;
   }
 }
+
