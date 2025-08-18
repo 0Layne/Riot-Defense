@@ -31,7 +31,7 @@
 <!-- Header -->
 <header class="header transparent" id="main-header">
     <a href="#" class="header__logo">
-      <img src="photo/riot-logo-white.png" alt="Riot Logo" class="logo-mobile">
+      <img src="photo/riot-logo-black.svg" alt="Riot Logo" class="logo-mobile">
     </a>
 
     <ion-icon name="menu-outline" class="header__toggle" id="nav-toggle"></ion-icon>
@@ -45,9 +45,9 @@
           <img src="photo/black-shield.png" alt="Riot Logo" class="logo" />
           <ul class="nav__list">
             <li class="nav__item"><a href="index.html" class="nav__link navbar-link active">Home</a></li>
-            <li class="nav__item"><a href="index.html#service" class="nav__link navbar-link">Film</a></li>
-            <li class="nav__item"><a href="contact.html" class="nav__link navbar-link">Customers</a></li>
-            <li class="nav__item"><a href="contact.html#faq" target="_blank" class="nav__link navbar-link">FAQ</a></li>
+            <li class="nav__item"><a href="index.html#service" class="nav__link navbar-link">Services</a></li>
+            <li class="nav__item"><a href="contact.html" class="nav__link navbar-link">About</a></li>
+            <li class="nav__item"><a href="contact.html#faq" target="_blank" class="nav__link navbar-link">Location</a></li>
             <li class="nav__item"><a href="contact.html#contact" target="_blank" class="nav__link navbar-link">Contact</a></li>
           </ul>
         </div>
@@ -73,12 +73,11 @@
   
 <section class="hero-section">
   <div class="hero-left">
-    <h1 class="hero-title title-animate">RIOT <span style="font-size: 15px; vertical-align: text-top; line-height: 3;">TM</span> DEFENSE</span></h1>
+    <h1 class="hero-title title-animate">RIOT <span style="font-size: 15px; vertical-align: text-top; line-height: 3;">TM</span><br> DEFENSE</span></h1>
     <h2 class="hero-slogan title-animate">Defense that you can depend on</h2>
-    <p id="hero-text" class="title-animate"> At Riot Defense, we don’t just install protection — we build peace of mind. With unmatched expertise, top-tier materials, 
-      and a relentless commitment to safeguarding what matters most, we make your safety our mission and failure is not an option.</p>
+
     <div class="hero-buttons title-animate">
-      <a href="contact.html#contact" target="_blank" class="btn quote">Get a Quote →</a>
+      <a href="contact.html#contact" target="_blank" class="btn quote">GET A QUOTE →</a>
       <a href="tel:+6028107892" class="btn learn">(602) 810-7892</a>
     </div>
   </div>
@@ -96,65 +95,109 @@
 
 
 
-<!--out servies-->
-<section class="custom-section" id="service">
-  <div class="top-row">
-    <h1 class="section-title scroll-animate scroll-animateR">Section 1</h1>
-    <div class="description-box scrolltome scroll-animateY">
-      <p>This is some short dummy description text that goes here 1234. This is some short dummy description text that goes here 1234. This is some short dummy description text that goes here.</p>
-      <div class="button-group">
-        <a href="contact.html#contact" target="_blank" class="work-btn-contact">Contact →</a>
-      </div>
-    </div>
-  </div>
 
-  <div class="bottom-containers bottom-containers1">
-    <div class="container box1">
-      <span class="work-icon"><i class="fa-solid fa-building"></i></span>
-      <h2>Container 1</h2>
-      <p>This is some short dummy description text that goes here 1234. This is some short dummy description text that goes here.</p>
-    </div>
-    <div class="container box2">
-      <span class="work-icon"><i class="fa-solid fa-house"></i></span>
-      <h2>Container 2</h2>
-      <p>This is some short dummy description text that goes here 1234. This is some short dummy description text that goes here.</p>
-    </div>
-    <div class="container box3">
-      <span class="work-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
-      <h2>Container 3</h2>
-      <p>This is some short dummy description text that goes here 1234. This is some short dummy description text that goes here.</p>
-    </div>
-  </div>
 
-    <div class="bottom-containers">
-    <div class="container box1">
-      <span class="work-icon"><i class="fa-solid fa-file"></i></i></span>
-      <h2>Container 4</h2>
-      <p>This is some short dummy description text that goes here 1234. This is some short dummy description text that goes here.</p>
+
+
+<section class="services">
+  <h2>Our Services</h2>
+  <div class="service-grid">
+    <!-- Card 1 -->
+    <div class="service-card">
+      <h3>Security Film</h3>
+      <p>Strengthen your windows with Riot Defense's cutting-edge film that keeps your property safe while looking sleek.</p>
+      <button data-modal="modal1" class="btn-animation-1">Read More</button>
     </div>
-    <div class="container box2">
-      <span class="work-icon"><i class="fa-solid fa-calendar"></i></span>
-      <h2>Container 5</h2>
-      <p>This is some short dummy description text that goes here 1234. This is some short dummy description text that goes here.</p>
-    </div>
-    <div class="container box3">
-      <span class="work-icon"><i class="fa-solid fa-truck"></i></span>
-      <h2>Container 6</h2>
-      <p>This is some short dummy description text that goes here 1234. This is some short dummy description text that goes here.</p>
+
+    <!-- Card 2 -->
+    <div class="service-card scrolltome">
+      <h3>Shatter Defense</h3>
+      <p>Protect against break-ins, UV rays, and extreme weather with virtually invisible shatter defense film.</p>
+      <button data-modal="modal2" class="btn-animation-1">Read More</button>
     </div>
   </div>
 </section>
+
+<!-- ===== MODALS ===== -->
+<div class="modal-overlay" id="overlay">
+  <!-- Modal 1 -->
+  <div class="modal" id="modal1">
+    <button class="close-btn">&times;</button>
+    <div class="modal-content">
+      <h3>Security Film</h3>
+      <p>
+        Security film is one of the most effective ways to strengthen vulnerable glass. 
+        By bonding directly to the window, our film holds shattered glass together, 
+        making it significantly harder for intruders to gain entry. 
+        This added layer of protection gives businesses and homeowners peace of mind, 
+        knowing their property and the people inside are safer against break-ins, 
+        vandalism, and unexpected riots.
+      </p>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div class="modal" id="modal2">
+    <button class="close-btn">&times;</button>
+    <div class="modal-content">
+      <h3>Shatter Defense</h3>
+      <p>
+        At Riot Defense, we provide state-of-the-art security film—rated among the best 
+        in the industry—for homes, businesses, and storefronts. Our advanced film is 
+        designed to strengthen your glass, helping protect against break-ins, extreme 
+        weather, and harmful UV rays, all while maintaining a clean, professional look.
+      </p>
+    </div>
+  </div>
+</div>
+<script>
+  const overlay = document.getElementById('overlay');
+  const buttons = document.querySelectorAll('[data-modal]');
+  const closeButtons = document.querySelectorAll('.close-btn');
+
+  // Open modal
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const modalId = btn.getAttribute('data-modal');
+      const modal = document.getElementById(modalId);
+      overlay.classList.add('active');
+      modal.classList.add('active');
+    });
+  });
+
+  // Click outside modal content closes
+overlay.addEventListener('click', e => {
+  // ✅ close if you click outside the modal box
+  if (!e.target.closest('.modal')) {
+    overlay.classList.remove('active');
+    document.querySelectorAll('.modal').forEach(m => m.classList.remove('active'));
+  }
+});
+
+
+  // Close buttons inside modal
+  closeButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      overlay.classList.remove('active');
+      document.querySelectorAll('.modal').forEach(m => m.classList.remove('active'));
+    });
+  });
+
+  // Optional: close on ESC key
+  document.addEventListener('keydown', e => {
+    if (e.key === "Escape") {
+      overlay.classList.remove('active');
+      document.querySelectorAll('.modal').forEach(m => m.classList.remove('active'));
+    }
+  });
+</script>
+
 
 
 
 
 <!--showcase-->
 <div id="section-1">
-  <div class="section-1 scroll-animateY">
-  <h1>Section2</h1>
-  <hr>
-  <h2>This is some short dummy</h2>
-  </div>
   <div class="section-1-img">
     <img src="photo/pexels-heyho-7031622.jpg" alt="First Line of Defense Image">
   </div>
@@ -165,21 +208,21 @@
 
 
 <!--about us-->
-  <section class="stats-hero" id="stat">
+<section class="stats-hero" id="stat">
   <div class="stats-left">
     <div class="stats-container">
       <div class="stat-item scroll-animate scroll-animateR">
-        <h2>340+</h2>
-        <p>Successful projects</p>
+        <h2>2020</h2>
+        <p>Founded</p>
       </div>
       <div class="stat-item scroll-animate scroll-animateR">
-        <h2>144+</h2>
-        <p>Continued engagement</p>
+        <h2>7+</h2>
+        <p>Years of Expertise</p>
       </div>
       <div class="stat-item scroll-animate scroll-animateR">
-        <h2>5+</h2>
-        <p>Years of expertise</p>
-    </div>
+        <h2>50</h2>
+        <p>Sates</p>
+      </div>
     </div>
   </div>
 
@@ -188,14 +231,202 @@
   </div>
 
   <div class="stats-text scroll-animateY">
-    <h1>Section 3 <br>  description text that goes here.</h1>
-    <p>This is some short dummy description text that goes here 1234. This is some short dummy description text that goes here.</p>
+    <h1>About  <br> Riot Defense</h1>
+    <p>
+      Founded in 2020 by Carsen Decker, Riot Defense was built on a mission to help
+      businesses, homeowners, and property owners feel safe, protected, and prepared for
+      the unexpected. With over 7 years of hands-on experience in security film and shutter
+      installations, we’ve developed a reputation for delivering proven protection with a
+      personal touch.
+    </p>
     <div class="stats-buttons">
       <a href="#" class="stat-btn-1">Lets Chat →</a>
-      <a href="#" class="stat-btn-2">Learn more</a>
+      <!-- Add id so we can hook the modal -->
+      <a href="#" class="stat-btn-2" id="about-btn">Learn more</a>
     </div>
   </div>
 </section>
+
+<!-- Modal for About Us (uses your existing .modal-overlay / .modal CSS) -->
+<div class="modal-overlay" id="about-overlay" aria-hidden="true">
+  <div class="modal" id="about-modal" role="dialog" aria-modal="true" aria-labelledby="about-modal-title">
+    <!-- Close button INSIDE the gray content -->
+    <button class="close-btn" type="button" aria-label="Close">&times;</button>
+    <div class="modal-content">
+      <h3 id="about-modal-title">About Riot Defense</h3>
+      <p>
+        As a proud family-owned and American company, we believe every client deserves
+        respect, attention, and peace of mind. Our certified technicians, located across the
+        country, are dedicated to providing the highest-quality products and professional
+        service. At Riot Defense, your safety isn’t just our business, it’s our promise.
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Elements
+  const aboutBtn = document.getElementById('about-btn');
+  const aboutOverlay = document.getElementById('about-overlay');
+  const aboutModal = document.getElementById('about-modal');
+  const aboutCloseBtn = aboutModal.querySelector('.close-btn');
+
+  // Open modal
+  aboutBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    aboutOverlay.classList.add('active');
+    aboutModal.classList.add('active');
+    aboutOverlay.setAttribute('aria-hidden', 'false');
+  });
+
+  // Close helper
+  function closeAboutModal() {
+    aboutOverlay.classList.remove('active');
+    aboutModal.classList.remove('active');
+    aboutOverlay.setAttribute('aria-hidden', 'true');
+  }
+
+  // Close on X
+  aboutCloseBtn.addEventListener('click', closeAboutModal);
+
+  // Close when clicking anywhere outside the modal box
+  aboutOverlay.addEventListener('click', (e) => {
+    if (!e.target.closest('.modal')) {
+      closeAboutModal();
+    }
+  });
+
+  // Close on ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && aboutOverlay.classList.contains('active')) {
+      closeAboutModal();
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+<section class="timeline">
+  <!-- Progress line -->
+  <div class="timeline-line"></div>
+
+  <!-- Step 1 -->
+  <div class="timeline-item left">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <img src="photo/placeholder-image-section2.gif" alt="Container 1 image here">
+      <div class="text">
+        <h3>Protection Against Riots & Intruders</h3>
+        <p>Worried about riots, looting, or smash-and-grab break-ins? Our security film reinforces
+          your existing glass, making it far more difficult for intruders to break through. With fast
+          and easy installation, your windows become a powerful barrier, keeping your property
+          secure 24/7 and giving you peace of mind.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="timeline-item right">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <div class="text">
+        <h3>Weather Resistance</h3>
+        <p>Severe weather can cause devastating damage when glass shatters. Our film is
+          engineered to hold glass together during hurricanes, tornados, monsoons, blizzards, or
+          high winds. By keeping windows intact, you reduce the risk of further property damage
+          and ensure greater safety inside.</p>
+      </div>
+      <img src="photo/placeholder-image-section2.gif" alt="Container 2 image here">
+    </div>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="timeline-item left">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <img src="photo/placeholder-image-section2.gif" alt="Container 3 image here">
+      <div class="text">
+        <h3>UV Protection & Energy Efficiency</h3>
+        <p>Riot Defense security film does more than strengthen glass—it helps protect your
+          interiors and lower energy costs. By blocking harmful UV rays, our film prevents fading
+          of furniture, carpets, and drapes while also reducing heat buildup. Pair it with our tint or
+          decorative films for added privacy, comfort, and style.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 4 -->
+  <div class="timeline-item right">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <div class="text">
+        <h4>Backed by a lifetime warranty and one-time installation, Riot Defense shutters are
+          the ultimate investment in security, privacy, and peace of mind.</h4>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  //timeline animation
+document.addEventListener("DOMContentLoaded", () => {
+  const timeline = document.querySelector(".timeline");
+  const dots = document.querySelectorAll(".timeline-dot");
+
+  const line = document.querySelector(".timeline-line");
+  const progress = document.createElement("div");
+  progress.classList.add("timeline-progress");
+  timeline.appendChild(progress);
+
+  const firstDot = dots[0];
+  const lastDot = dots[dots.length - 1];
+
+  function updateLines() {
+    const firstRect = firstDot.getBoundingClientRect();
+    const lastRect = lastDot.getBoundingClientRect();
+
+    const firstY = firstRect.top + window.scrollY;
+    const lastY = lastRect.top + window.scrollY;
+
+    // Set the static gray line so it only runs between dots
+    line.style.top = firstY - timeline.offsetTop + "px";
+    line.style.height = (lastY - firstY) + "px";
+
+    // Progress line logic (unchanged)
+    const scrollY = window.scrollY + window.innerHeight / 2;
+    let progressHeight = 0;
+    if (scrollY > firstY) {
+      progressHeight = Math.min(scrollY - firstY, lastY - firstY);
+    }
+
+    progress.style.top = firstY - timeline.offsetTop + "px";
+    progress.style.height = progressHeight + "px";
+  }
+
+  window.addEventListener("scroll", updateLines);
+  window.addEventListener("resize", updateLines);
+  updateLines();
+});
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -249,13 +480,15 @@
       </div>
 
       <div class="quote-right-info scroll-animateY">
-        <p class="quote-description">This is some short dummy description text that goes here 1234.This is some short dummy description text that goes here 1234.This is some short dummy description text that goes here 1234.</p>
+        <p class="quote-description">At Riot Defense, your safety is our top priority. Whether you’re looking to protect your business,
+          home, or property, our team is here to answer your questions and provide the right security
+          solutions.</p>
         <div class="quote-social-row">
             <a href="https://www.facebook.com" target="_blank"><i class="fa-solid fa-phone" style="color: black;"></i></a>
             <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-google" style="color: black;"></i></a>
             <a href="https://www.instagram.com/new_image_az/" target="_blank"><i class="fa-brands fa-instagram" style="color: black;"></i></a>
             <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook" style="color: black;"></i></a>
-          <span class="quote-email">info@example.com</span>
+          <span class="quote-email">info@riotdefense.com</span>
         </div>
       </div>
     </div>
@@ -287,7 +520,7 @@
     <div class="socials">
         <a href="https://www.facebook.com" target="_blank"><i class="fa-solid fa-phone"></i></a>
         <span class="footer-dash">|</span>
-        <a href="https://www.facebook.com" target="_blank"><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-google"></i></a></a>
+        <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-google"></i></a></a>
         <span class="footer-dash">|</span>
         <a href="https://www.instagram.com/new_image_az/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
         <span class="footer-dash">|</span>
@@ -297,7 +530,7 @@
     <div class="footer-col scroll-animateY">
       <h4>Contact Info</h4>
       <hr class="footer-title-line">
-      <p>Email: example@example.com</p>
+      <p>Email: info@riotdefense.com</p>
       <p>Phone: (602) 810-7892</p>
     </div>
     <div class="footer-col scroll-animateY">
@@ -350,6 +583,3 @@
 
 </body>
 </html>
-
-
-
