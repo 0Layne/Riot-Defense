@@ -5,21 +5,32 @@
   font-family: "Goldman", sans-serif;
 }
 .header {
-  background-color: #000 !important;
+  background-color: #ffffff !important;
 }
-.header:hover {
-  background-color: #111 !important;
+.socials-header a{
+  color: #000 !important;
 }
-@media (max-width: 1090px){
-  .header:hover{
-    background-color: #000 !important;
-  }
+.cta {
+  background: transparent;
+  color: rgb(255, 255, 255) !important;
+  background-color: #000000 !important;
+  border: none;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.5s ease;
+  display: inline-block;
+  font-weight: 500;
 }
-
-
-
+.header:hover .cta:hover {
+  background: transparent !important;
+  border: 0.5px solid rgb(0, 0, 0) !important;
+  color: rgb(0, 0, 0) !important;
+  transform: scale(1.02);
+}
 body{
   overflow-x: hidden;
+  background-image: url(photo/background-image.jpg);
 }
 
 /* Scroll-in animation (handled by IntersectionObserver) */
@@ -182,7 +193,7 @@ body{
 }
 
 .testimonial-box {
-  background-image: url(photo/test-bg-image.avif);
+  background-image: url(photo/redd.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -244,7 +255,12 @@ body{
   color: #ffffff;
   line-height: 1.4;
 }
-
+@media screen and (max-width: 1200px){
+  .testimonial-title{
+    font-size: 5rem;
+    margin-top: 10vh;
+  }
+}
 @media screen and (max-width: 900px){
     .scroll-arrow {
     font-size: 1.3rem;
@@ -252,7 +268,7 @@ body{
     cursor: pointer;
     position: absolute;
     right: 40%;
-    bottom: 45%;
+    bottom: 30%;
     transform: translateX(-50%);
     width: 85px;
     height: 85px;
@@ -303,8 +319,8 @@ body{
     color: rgb(0, 0, 0);
     cursor: pointer;
     position: absolute;
-    right: 28%;
-    bottom: 25%;
+    right: 37%;
+    bottom: 35%;
     transform: translateX(-50%);
     width: 85px;
     height: 85px;
@@ -353,194 +369,83 @@ body{
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-.FAQ-background {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 0; /* optional: adds spacing */
-  overflow: hidden;
-}
-.faq-bg-img {
-  background-image: url(photo/testimonial-bg.jpg);
-  background-size: cover;
-  background-position: center;
-  position: relative;
-
-}
-
-.faq-bg-img::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.831);
-  z-index: 1;
-}
-
-.faq-section {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding-top: 2rem;
-  padding-bottom: 10rem;
-  z-index: 2;
-  position: relative;
-  pointer-events: auto; /* Make FAQ section interactive */
-}
-
-.FAQ-background img {
-  width: 900px;           /* or try: 100% or 80vw for responsive scaling */
-  max-width: 30%;
-  height: 100%;
-  margin: 0 auto;
-  object-fit: cover;
-  display: block;
-  z-index: 2;
-}
-
-
-
-.faq-title {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 3.5rem;
-  color: #000000;
-}
-
-.faq-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 100;
-}
-
-.faq-item {
-  background: #fff !important;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: all 0.8s ease;
-  padding-bottom: 2vh;
-}
-.faq-item:hover{
-  transform: scale(1.02);
-}
-.faq-question {
-  padding: 20px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  cursor: pointer;
-  position: relative;
-  color: #000;
-}
-
-.faq-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 3rem;
-  transition: transform 0.3s ease;
-  user-select: none;
-  transition: all 0.8s ease
-}
-
-.faq-item.active .faq-toggle {
-  transform: rotate(45deg);
-  /* Turns + into × */
-}
-
-.faq-answer {
-  padding: 0 20px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease, padding 0.3s ease;
-  font-size: 1.5rem;
-  line-height: 1;
-  color: #000000;
-  transition: all 0.5s ease
-}
-
-.faq-item.active .faq-answer {
-  padding: 15px 50px 50px;
-  margin-bottom: 5vh;
-}
-
-@media screen and (max-width: 900px) {
-  .FAQ-background img {
-    max-width: 50%;
-    height: auto;
-  }
-
-  .faq-section {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .faq-question {
+@media screen and (max-width: 600px) {
+      .scroll-arrow {
     font-size: 1.3rem;
-    padding: 18px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    position: absolute;
+    right: 35%;
+    bottom: 35%;
+    transform: translateX(-50%);
+    width: 85px;
+    height: 85px;
+    background: transparent;
+    border-radius: 50%;
+    border: solid 1px rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bounce 1.5s infinite;
+    z-index: 90;
+    transition: transform 0.3s ease, background 0.3s ease;
   }
+}
 
-  .faq-toggle {
+@media screen and (max-width: 500px) {
+    .testimonial-title {
     font-size: 2.5rem;
-    top: 18px;
-    right: 18px;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto 5vh auto;
   }
-
-  .faq-answer {
+      .scroll-arrow {
     font-size: 1.3rem;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    position: absolute;
+    right: 33%;
+    bottom: 47%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 70px;
+    background: transparent;
+    border-radius: 50%;
+    border: solid 1px rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bounce 1.5s infinite;
+    z-index: 90;
+    transition: transform 0.3s ease, background 0.3s ease;
   }
+}
 
-  .faq-item.active .faq-answer {
-    padding: 15px 30px 40px;
+@media screen and (max-width: 400px) {
+      .scroll-arrow {
+    font-size: 1.3rem;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    position: absolute;
+    right: 32%;
+    bottom: 40%;
+    transform: translateX(-50%);
+    width: 65px;
+    height: 65px;
+    background: transparent;
+    border-radius: 50%;
+    border: solid 1px rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bounce 1.5s infinite;
+    z-index: 90;
+    transition: transform 0.3s ease, background 0.3s ease;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .FAQ-background img {
-    max-width: 70%;
-    height: auto;
-  }
 
-  .faq-title {
-    font-size: 2.5rem;
-  }
 
-  .faq-section {
-    padding: 1rem;
-    padding-bottom: 6rem;
-  }
-
-  .faq-question {
-    font-size: 1.2rem;
-  }
-
-  .faq-toggle {
-    font-size: 2rem;
-    top: 16px;
-    right: 16px;
-  }
-
-  .faq-answer {
-    font-size: 1.1rem;
-  }
-
-  .faq-item.active .faq-answer {
-    padding: 0px 20px 0px;
-    padding-bottom: 15vh;
-  }
-}
 
 
 
