@@ -16,7 +16,26 @@
   background-color: #111 !important;
 }
 
-
+  .nav__link{
+    font-size: 1.1rem;
+    color: rgb(255, 255, 255);
+    display: block;
+  }
+.header:hover .cta {
+  background: transparent;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border: none;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.5s ease;
+  display: inline-block;
+  font-weight: 500;
+}
+.header:hover .socials-header a{
+  color: #ffffff;
+}
 
 
 
