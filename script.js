@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function onScrollHideHeader() {
     const currentScroll = window.scrollY;
-    if (currentScroll > 1100) {
+    if (currentScroll > 650) {
       if (currentScroll > lastScrollY) {
         header.classList.add('header--hide');
       } else {
