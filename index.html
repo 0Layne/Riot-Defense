@@ -43,6 +43,7 @@
 
         <div class="header-left">
           <img src="photo/black-shield.png" alt="Riot Logo" class="logo" />
+          <img src="photo/riot-logo-shield-white.svg" alt="Riot Logo" class="logo-1" />
           <ul class="nav__list">
             <li class="nav__item"><a href="index.html" class="nav__link navbar-link active">Home</a></li>
             <li class="nav__item"><a href="index.html#service" class="nav__link navbar-link">Services</a></li>
@@ -99,98 +100,141 @@
 
 
 
-<section class="services">
+
+
+    
+
+
+<!-- ===== UNIQUE SERVICES SECTION - LARGE VERSION ===== -->
+<section class="services-unique">
   <h2>Our Services</h2>
-  <div class="service-grid">
-    <!-- Card 1 -->
-    <div class="service-card">
-      <h3>Security Film</h3>
-      <p>Strengthen your windows with Riot Defense's cutting-edge film that keeps your property safe while looking sleek.</p>
-      <button data-modal="modal1" class="btn-animation-1">Read More</button>
+  <div class="services-unique-wrapper">
+    <!-- Security Film -->
+    <div class="service-panel panel-left">
+      <div class="service-icon">
+
+        <!-- Glass Breaking Icon -->
+        <div class="service-icon glass-break-icon">
+          <svg viewBox="0 0 100 100" width="100" height="100">
+            <!-- Frame -->
+            <rect x="15" y="15" width="70" height="70" stroke="black" stroke-width="3" fill="none"/>
+
+              <!-- Cracks (curved & animated) -->
+              <path d="M50 50 Q50 50 50 50" stroke="black" stroke-width="2" fill="none">
+                <animate attributeName="d" values="
+                  M50 50 Q50 50 50 50;
+                  M50 50 Q65 40 75 20;
+                  M50 50 Q50 50 50 50" dur="5s" repeatCount="indefinite"/>
+              </path>
+              
+              <path d="M50 50 Q50 50 50 50" stroke="black" stroke-width="2" fill="none">
+                <animate attributeName="d" values="
+                  M50 50 Q50 50 50 50;
+                  M50 50 Q35 40 25 30;
+                  M50 50 Q50 50 50 50" dur="5s" begin="0.2s" repeatCount="indefinite"/>
+              </path>
+
+              <path d="M50 50 Q50 50 50 50" stroke="black" stroke-width="2" fill="none">
+                <animate attributeName="d" values="
+                  M50 50 Q50 50 50 50;
+                  M50 50 Q65 60 75 75;
+                  M50 50 Q50 50 50 50" dur="5s" begin="0.4s" repeatCount="indefinite"/>
+              </path>
+
+              <path d="M50 50 Q50 50 50 50" stroke="black" stroke-width="2" fill="none">
+                <animate attributeName="d" values="
+                  M50 50 Q50 50 50 50;
+                  M50 50 Q35 65 25 75;
+                  M50 50 Q50 50 50 50" dur="5s" begin="0.6s" repeatCount="indefinite"/>
+              </path>
+
+              <path d="M50 50 Q50 50 50 50" stroke="black" stroke-width="2" fill="none">
+                <animate attributeName="d" values="
+                  M50 50 Q50 50 50 50;
+                  M50 50 Q50 30 50 15;
+                  M50 50 Q50 50 50 50" dur="5s" begin="0.8s" repeatCount="indefinite"/>
+              </path>
+
+              <path d="M50 50 Q50 50 50 50" stroke="black" stroke-width="2" fill="none">
+                <animate attributeName="d" values="
+                  M50 50 Q50 50 50 50;
+                  M50 50 Q50 70 40 85;
+                  M50 50 Q50 50 50 50" dur="5s" begin="1s" repeatCount="indefinite"/>
+              </path>
+            </svg>
+          </div>
+      </div>
+      
+      <div class="service-text">
+        <h3>Security Film/Shatter Defense</h3>
+        <p>Riot Defense's state-of-the-art security film strengthens your windows, slowing and deterring intruders while maintaining a sleek, OEM appearance. Easy to install and virtually invisible.</p>
+        <a href="Security .html#security" target="blank">
+          <button class="btn-animation-1">Read More</button>
+        </a>
+      </div>
     </div>
 
-    <!-- Card 2 -->
-    <div class="service-card scrolltome">
-      <h3>Shatter Defense</h3>
-      <p>Protect against break-ins, UV rays, and extreme weather with virtually invisible shatter defense film.</p>
-      <button data-modal="modal2" class="btn-animation-1">Read More</button>
+
+    <!-- Rolling Shutters -->
+    <div class="service-panel panel-right">
+      <div class="service-icon ">
+
+      <!-- Rolling Shutter Icon -->
+      <div class="service-icon shutter-icon">
+        <svg viewBox="0 0 100 100" width="100" height="100">
+          <!-- Frame -->
+          <rect x="20" y="15" width="60" height="70" stroke="black" stroke-width="3" fill="none"/>
+
+          <!-- Shutter slats group -->
+          <g>
+            <!-- Slats -->
+            <rect x="20" y="15" width="60" height="0" fill="lightgray">
+              <animate attributeName="height" values="0;70;0" dur="5s" repeatCount="indefinite"/>
+            </rect>
+
+            <!-- Shading stripes -->
+            <rect x="20" y="15" width="60" height="0" fill="url(#slatStripes)">
+              <animate attributeName="height" values="0;70;0" dur="5s" repeatCount="indefinite"/>
+            </rect>
+
+            <!-- Bottom edge -->
+            <rect x="20" y="85" width="60" height="5" fill="gray">
+              <animate attributeName="y" values="15;85;15" dur="5s" repeatCount="indefinite"/>
+            </rect>
+          </g>
+
+          <!-- Pattern for stripes -->
+          <defs>
+            <pattern id="slatStripes" width="60" height="10" patternUnits="userSpaceOnUse">
+              <rect width="60" height="5" fill="darkgray"/>
+              <rect y="5" width="60" height="5" fill="lightgray"/>
+            </pattern>
+          </defs>
+
+            <!-- Rolling button -->
+    <circle cx="50" cy="90" r="6" fill="black">
+      <animate attributeName="r" values="6;8;6" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="fill" values="black;gray;black" dur="2s" repeatCount="indefinite"/>
+    </circle>
+        </svg>
+      </div>
+
+      </div>
+      <div class="service-text">
+        <h3>Rolling Security Shutters/Boarding</h3>
+        <p>Riot defense’s rolling security shutters provide reliable protection and privacy. Designed to withstand riots, intruders, and harsh weather conditions. Safeguard your valuables with style and strength.</p>
+        <a href="Security .html#shutter" target="blank">
+          <button class="btn-animation-1">Read More</button>
+        </a>
+      </div>
     </div>
   </div>
+   <div class="scrolltome"></div>
 </section>
 
-<!-- ===== MODALS ===== -->
-<div class="modal-overlay" id="overlay">
-  <!-- Modal 1 -->
-  <div class="modal" id="modal1">
-    <button class="close-btn">&times;</button>
-    <div class="modal-content">
-      <h3>Security Film</h3>
-      <p>
-        Security film is one of the most effective ways to strengthen vulnerable glass. 
-        By bonding directly to the window, our film holds shattered glass together, 
-        making it significantly harder for intruders to gain entry. 
-        This added layer of protection gives businesses and homeowners peace of mind, 
-        knowing their property and the people inside are safer against break-ins, 
-        vandalism, and unexpected riots.
-      </p>
-    </div>
-  </div>
-
-  <!-- Modal 2 -->
-  <div class="modal" id="modal2">
-    <button class="close-btn">&times;</button>
-    <div class="modal-content">
-      <h3>Shatter Defense</h3>
-      <p>
-        At Riot Defense, we provide state-of-the-art security film—rated among the best 
-        in the industry—for homes, businesses, and storefronts. Our advanced film is 
-        designed to strengthen your glass, helping protect against break-ins, extreme 
-        weather, and harmful UV rays, all while maintaining a clean, professional look.
-      </p>
-    </div>
-  </div>
-</div>
-<script>
-  const overlay = document.getElementById('overlay');
-  const buttons = document.querySelectorAll('[data-modal]');
-  const closeButtons = document.querySelectorAll('.close-btn');
-
-  // Open modal
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const modalId = btn.getAttribute('data-modal');
-      const modal = document.getElementById(modalId);
-      overlay.classList.add('active');
-      modal.classList.add('active');
-    });
-  });
-
-  // Click outside modal content closes
-overlay.addEventListener('click', e => {
-  // ✅ close if you click outside the modal box
-  if (!e.target.closest('.modal')) {
-    overlay.classList.remove('active');
-    document.querySelectorAll('.modal').forEach(m => m.classList.remove('active'));
-  }
-});
 
 
-  // Close buttons inside modal
-  closeButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      overlay.classList.remove('active');
-      document.querySelectorAll('.modal').forEach(m => m.classList.remove('active'));
-    });
-  });
 
-  // Optional: close on ESC key
-  document.addEventListener('keydown', e => {
-    if (e.key === "Escape") {
-      overlay.classList.remove('active');
-      document.querySelectorAll('.modal').forEach(m => m.classList.remove('active'));
-    }
-  });
-</script>
 
 
 
@@ -432,35 +476,59 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-<!--Process-->
-<section class="grid-section" id="process">
-  <!-- Row 1 -->
-  <div class="grid-item text scroll-animate scroll-animateR">
-    <h2>Section 4 box 1</h2>
-    <p>This is some short dummy description text that goes here 1234. This is some short dummy description text that goes here 1234.</p>
-  </div>
-  <div class="grid-item image">
-    <img src="photo/pexels-fotografiagmazg-10043067.jpg" alt="Image 1">
-  </div>
+<section class="proc-section"> 
+  <h2 class="proc-title scroll-animate scroll-animateR"> How to <span style="border-bottom: solid 2px black;">Get</span> Started </h2>
+   <!-- Background watermark --> 
+    <div class="proc-bg"> <img src="photo/riot-shield-logo.png" alt="Logo Watermark"> </div>
+     <div class="process-timeline"> 
+      <!-- Step 1 --> 
+       <div class="process-card">
+         <div class="process-icon">①</div> 
+         <h3 class="process-summary">Consultation / Quote Request</h3> 
+         <div class="process-details"> 
+          <p>Start by reaching out for a free consultation or quote. We’ll listen to your needs and answer any questions you have.</p> 
+        </div> </div> <!-- Step 2 --> 
+        <div class="process-card"> 
+          <div class="process-icon">②</div> 
+          <h3 class="process-summary">On-Site Threat Assessment</h3> 
+          <div class="process-details"> 
+            <p>One of our certified technicians will visit your property to conduct a full security assessment. We’ll review
+               vulnerabilities and work with you to find the best solution within your budget.</p> 
+          </div> 
+        </div> 
+        <!-- Step 3 --> 
+         <div class="process-card"> 
+          <div class="process-icon">③</div> 
+          <h3 class="process-summary">Custom Proposal</h3> 
+          <div class="process-details"> 
+            <p>After the assessment, we’ll provide a clear, detailed proposal tailored to your property’s needs.</p> 
+          </div> 
+        </div> 
+        <!-- Step 4 --> 
+         <div class="process-card"> 
+          <div class="process-icon">④</div> 
+          <h3 class="process-summary">Installation Scheduling</h3> 
+          <div class="process-details"> 
+            <p>Once approved, we’ll schedule your installation at a time that works best for you.</p> 
+          </div> 
+        </div> 
+        <!-- Step 5 --> 
+         <div class="process-card"> 
+          <div class="process-icon">⑤</div> 
+          <h3 class="process-summary">Installation & Protection</h3> 
+          <div class="process-details"> 
+            <p>Our expert team installs your security film or shutters with precision and efficiency—delivering
+               lasting protection and peace of mind.</p> 
+          </div> 
+        </div> 
+      </div> 
+    </section> 
+    
+<script> const cards = document.querySelectorAll(".process-card");
+     cards.forEach(card => { card.addEventListener("click",
+      () => { card.classList.toggle("active"); }); }); 
+</script>
 
-  <!-- Row 2 (Reversed) -->
-  <div class="grid-item image">
-    <img src="photo/pexels-tranmautritam-18177056.jpg" alt="Image 2">
-  </div>
-  <div class="grid-item text scroll-animateY">
-    <h2>Section 4 box 2</h2>
-    <p>This is some short dummy description text that goes here 1234. This is some short dummy description text that goes here 1234.</p>
-  </div>
-
-  <!-- Row 3 -->
-  <div class="grid-item text scroll-animate scroll-animateR">
-    <h2>Section 4 box 3</h2>
-    <p>This is some short dummy description text that goes here 1234. This is some short dummy description text that goes here 1234.</p>
-  </div>
-  <div class="grid-item image">
-    <img src="photo/pexels-alex-cooper-358580-972845.jpg" alt="Image 3">
-  </div>
-</section>
 
 
 
@@ -472,12 +540,21 @@ document.addEventListener("DOMContentLoaded", () => {
 <section class="quote-section">
   <div class="quote-container">
     <h1 class="quote-title scroll-animate scroll-animateR">Get Your Project Started Today</h1>
-
+      <div class="bullet-proc">
+        <ul>
+          <li>Free Consultation</li>
+          <li>Expert Threat Assesssments</li>
+          <li>Fast, Professional Installation Scheduling</li>
+          <li>Nationwide Certified Technicians Ready to Serve You</li>
+        </ul>
+        <p class="warn-quote"><img src="photo/black-shield.png"> Don't Wait Unitl it's Too Late - Get in Touch Today and Secure What Matters Most.</p>
+      </div>
     <div class="quote-bottom-row">
       <div class="quote-left-buttons scroll-animate scroll-animateR">
-      <a href="#" class="stat-btn-1">Lets Chat →</a>
-      <a href="#" class="stat-btn-2">Learn more</a>
+      <a href="#" class="btn-animation">Why Contact Us?</a>
       </div>
+
+
 
       <div class="quote-right-info scroll-animateY">
         <p class="quote-description">At Riot Defense, your safety is our top priority. Whether you’re looking to protect your business,
