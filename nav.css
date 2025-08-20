@@ -106,7 +106,18 @@ img {
   color: rgb(0, 0, 0);
   transform: scale(1.02);
 }
-
+.header--scrolled .cta {
+  background: transparent;
+  color: rgb(255, 255, 255);
+  background-color: #000000;
+  border: none;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.5s ease;
+  display: inline-block;
+  font-weight: 500;
+}
 
 .header--fixed {
   position: fixed;
@@ -170,9 +181,9 @@ img {
 
 /*===== NAV =====*/
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1500px) {
   .nav__list{
-    gap: 0.8rem !important;
+    gap: 0.6rem !important;
   }
 }
 
@@ -195,7 +206,7 @@ img {
     background-image: url(photo/testimonial-bg.jpg);
     background-size: cover;
     background-position: center;
-    color: white;
+    color: white !important;
     z-index: 999;
     transition: 0.5s;
     padding: 0;
@@ -212,7 +223,7 @@ img {
 }
   .header{
     padding: 1vh;
-    background-color: #000000;
+    background-color: #ffffff;
   }
   .nav__content {
     display: flex;
@@ -242,10 +253,13 @@ img {
   }
 
   .logo {
+    display: none;
+  }
+  .logo-1{
+    display: inline-block !important;
     height: 80px;
     margin-bottom: 1.5rem;
   }
-
   .nav__list {
     display: flex;
     flex-direction: column;
@@ -262,7 +276,7 @@ img {
   }
 
   .nav__link {
-    color: white;
+    color: white !important;
     font-size: 1.1rem;
   }
 
@@ -299,7 +313,7 @@ img {
     
     background: transparent;
     color: white;
-    border: 1px solid white;
+    border: 1px solid white !important;
     padding: 0.8rem 1.5rem;
     border-radius: 30px;
     font-weight: bold;
@@ -331,14 +345,9 @@ img {
     -webkit-transition: .5s;
     transition: .5s;
   }
-      .header{
-      background-color: #000000;
-      padding: 2vh !important;
-      display: fixed !important;
-    }
+
   .header{
     padding: 0.5vh;
-    background-color: #000000;
   }
   .nav__menu {
     position: absolute;
@@ -400,11 +409,6 @@ img {
     transition: .5s;
   }
   
-    .header{
-      background-color: #000000;
-      padding: 2vh !important;
-      display: fixed !important;
-    }
   .nav__menu {
     position: absolute;
     left: 50%;
@@ -507,6 +511,7 @@ img {
   transition: all 0.5s ease;
   display: inline-block;
   font-weight: 500;
+
 }
 
 .cta:hover {
@@ -522,8 +527,7 @@ img {
   height: 60px !important;
 }
 .logo-1 {
-  height: 80px;
-  margin: 1vh;
+  display: none;
 }
 /* Layout containers */
 .header-left {
@@ -564,7 +568,7 @@ img {
 }
 
 .header__toggle {
-  color: #ffffff;
+  color: #000000;
   font-size: 2rem;
   transition:  all 0.7s ;
 }
