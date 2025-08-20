@@ -1,670 +1,522 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Goldman", sans-serif;
-}
-.header {
-  background-color: #ffffff !important;
-}
-.socials-header a{
-  color: #000 !important;
-}
-.cta {
-  background: transparent;
-  color: rgb(255, 255, 255) !important;
-  background-color: #000000 !important;
-  border: none;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  border-radius: 30px;
-  transition: all 0.5s ease;
-  display: inline-block;
-  font-weight: 500;
-}
-.header:hover .cta:hover {
-  background: transparent !important;
-  border: 0.5px solid rgb(0, 0, 0) !important;
-  color: rgb(0, 0, 0) !important;
-  transform: scale(1.02);
-}
-body{
-  overflow-x: hidden;
-  background-image: url(photo/background-image.jpg);
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* Scroll-in animation (handled by IntersectionObserver) */
-.title-animate {
-  opacity: 0;
-  transform: translateY(30%);
-  transition: transform 2s ease, opacity 1.8s ease;
-}
+    <title>Riot Defense | Contact Page</title>
 
-.title-animate.title-active {
-  opacity: 1;
-  transform: translateY(0);
-}
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="nav.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Riot Defense" />
+    <link rel="manifest" href="favicon//site.webmanifest" />
 
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<!-- Header -->
+<header class="header transparent" id="main-header">
+    <a href="#" class="header__logo">
+      <img src="photo/riot-logo-black.svg" alt="Riot Logo" class="logo-mobile">
+    </a>
 
+    <ion-icon name="menu-outline" class="header__toggle" id="nav-toggle"></ion-icon>
 
+    <nav class="nav" id="nav-menu">
+      <div class="nav__content bd-grid">
 
-.scroll-animate {
-  opacity: 0;
-  transition: transform 1s ease, opacity 1s ease;
-  will-change: transform, opacity;
-}
+        <ion-icon name="close-outline" class="nav__close" id="nav-close"></ion-icon>
 
-/* Use a large animation distance */
-.scroll-animateL {
-  transform: translateX(100px);
-}
+        <div class="header-left">
+          <img src="photo/black-shield.png" alt="Riot Logo" class="logo" />
+          <ul class="nav__list">
+            <li class="nav__item"><a href="index.html" class="nav__link navbar-link active">Home</a></li>
+            <li class="nav__item"><a href="index.html#service" class="nav__link navbar-link">Film</a></li>
+            <li class="nav__item"><a href="contact.html" class="nav__link navbar-link">Customers</a></li>
+            <li class="nav__item"><a href="contact.html#faq" target="_blank" class="nav__link navbar-link">FAQ</a></li>
+            <li class="nav__item"><a href="contact.html#contact" target="_blank" class="nav__link navbar-link">Contact</a></li>
+          </ul>
+        </div>
 
-/* Optional: animation from right to left */
-.scroll-animateR {
-  transform: translateX(-100px);
-}
-
-.scroll-animate.active {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* Prevent animation from affecting layout */
-.scroll-animateL,
-.scroll-animateR {
-  display: inline-block;         /* Ensure it doesn’t stretch layout */
-  overflow-x: hidden;            /* Hide animated overflow */
-  max-width: 100%;               /* Prevent wider than parent */
-  backface-visibility: hidden;  /* Rendering optimization */
-}
-
-
-
-
-/*scroll animate top to bottom*/
-.scroll-animateY {
-  opacity: 0;
-  transform: translateY(-100%);
-  transition: transform 1.5s ease, opacity 1.5s ease;
-}
-
-.scroll-animateY-right {
-  transform: translateY(100%);
-}
-
-.scroll-animateY.active {
-  opacity: 1;
-  transform: translateY(0);
-}
+        <div class="nav-social-wrapper">
+          <div class="socials-header">
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-solid fa-phone"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-google"></i></a>
+            <a href="https://www.instagram.com/new_image_az/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          </div>
+          <div class="cta-button-anim">
+          <a href="contact.html#contact" target="_blank" class="cta">Let's Chat →</a>
+          </div>
+        </div>
+        
+      </div>
+    </nav>
+  </header>
 
 
 
 
 
-/* Scroll Arrow - always centered */
-.section-border {
-  height: 0.1px;
-}
+    <!--scroll down arrow-->
+<div class="section-border">
+  <div class="scroll-arrow" onclick="scrollToSection('scrolltome')">
+    <i class="fa-solid fa-arrow-down"></i>
+  </div>
+</div>
 
-.scroll-arrow {
-  font-size: 1.3rem;
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-  position: absolute;
-  right: 10%;
-  bottom: 40%;
-  transform: translateX(-50%);
-  width: 85px;
-  height: 85px;
-  background: transparent;
-  border-radius: 50%;
-  border: solid 1px rgb(0, 0, 0);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: bounce 1.5s infinite;
-  z-index: 90;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
 
-.scroll-arrow:hover {
-  background: #000000;
-  transform: translateX(-50%) scale(1.2);
-  color: rgb(255, 255, 255);
-}
 
-/* Bounce Animation */
-@keyframes bounce {
 
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateX(-50%) translateY(0);
+
+
+
+
+
+
+<!--Our Process-->
+<div class="process-wrapper" id="locations-section">
+  <h2 class="process-heading">Schedule a Demo</h2>
+  <hr class="process-heading-line">
+  <p class="process-subheading">Want to see the strength of our products for yourself? At Riot Defense, we believe in showing—not
+    just telling—why our security film and shutters are the best in the business.</p>
+
+  <section class="process-section">
+    <div class="process-container">
+      <!-- Sidebar -->
+      <div class="process-sidebar">
+        <ul>
+          <li data-target="Discovery" class="active">Schedule</li>
+          <li data-target="design">Demonstration</li>
+          <li data-target="Consultation">Hands-On</li>
+          <li data-target="Final">Q&A</li>
+        </ul>
+      </div>
+
+      <!-- Main Content -->
+          <div class="process-content">
+            <section id="Discovery" class="process-content-block">
+              <div class="process-inner">
+                <div class="process-left-image ">
+                    <img src="photo/placeholder-image-section2.gif" alt="Container 1 image here">
+                </div>
+            <div class="process-feature-content">
+              <h3>Schedule Your Demo</h3>
+              <hr class="process-title-line">
+              <p>Contact us by phone, email, or through our website to book a demonstration at a time that works for you.</p>
+              <ul>
+                <li><strong>✔ container 1 step 1:</strong>This is some sort of dummy txt. Text will go here! This is some sort of dummy txt. Text will go here!</li>
+                <li><strong>✔ container 2 step 1:</strong> This is some sort of dummy txt. Text will go here! This is some sort of dummy txt. Text will go here!</li>
+                <li><strong>✔ container 3 step 1:</strong>  This is some sort of dummy txt. Text will go here! This is some sort of dummy txt. Text will go here!</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="design" class="process-content-block">
+          <div class="process-inner">
+            <div class="process-feature-content">
+              <h3>On-Site Demonstration</h3>
+              <hr class="process-title-line">
+              <p>One of our experts will come to your location with product samples and perform a live demo. We’ll
+                showcase the durability, impact resistance, and security features that set our products apart. </p>
+              <ul>
+                <li><strong>✔ container 1 step 1:</strong>This is some sort of dummy txt. Text will go here! This is some sort of dummy txt. Text will go here!</li>
+                <li><strong>✔ container 2 step 1:</strong> This is some sort of dummy txt. Text will go here! This is some sort of dummy txt. Text will go here!</li>
+                <li><strong>✔ container 3 step 1:</strong>  This is some sort of dummy txt. Text will go here! This is some sort of dummy txt. Text will go here!</li>
+            </ul>
+            </div>
+            <div class="process-left-image">
+                <img src="photo/placeholder-image-section2.gif" alt="Container 2 image here">
+            </div>
+          </div>
+        </section>
+
+        <section id="Consultation" class="process-content-block">
+          <div class="process-inner">
+            <div class="process-left-image">
+                <img src="photo/placeholder-image-section2.gif" alt="Container 3 image here">
+            </div>
+            <div class="process-feature-content">
+              <h3>Hands-On Experience</h3>
+              <hr class="process-title-line">
+                  <p>See firsthand how our film and shutters hold up against force, weather conditions, and real-world
+                    scenarios—proving the level of protection your property can have.</p>
+                  <ul>
+                    <li><strong>✔ container 1 step 1:</strong>This is some sort of dummy txt. Text will go here! This is some sort of dummy txt. Text will go here!</li>
+                    <li><strong>✔ container 2 step 1:</strong> This is some sort of dummy txt. Text will go here! This is some sort of dummy txt. Text will go here!</li>
+                    <li><strong>✔ container 3 step 1:</strong>  This is some sort of dummy txt. Text will go here! This is some sort of dummy txt. Text will go here!</li>
+                  </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="Final" class="process-content-block">
+          <div class="process-inner">
+            <div class="process-feature-content">
+              <h3>Q&A and Recommendations</h3>
+              <hr class="process-title-line">
+                <p>After the demo, we’ll answer your questions and provide professional recommendations tailored to
+                   your property’s needs.</p>
+                <ul>
+                    <li><strong>✔ container 1 step 1:</strong>This is some sort of dummy txt. Text will go here! This is some sort of dummy txt. Text will go here!</li>
+                    <li><strong>✔ container 2 step 1:</strong> This is some sort of dummy txt. Text will go here! This is some sort of dummy txt. Text will go here!</li>
+                    <li><strong>✔ container 3 step 1:</strong>  This is some sort of dummy txt. Text will go here! This is some sort of dummy txt. Text will go here!</li>
+                </ul>
+            </div>
+            <div class="process-left-image ">
+                <img src="photo/placeholder-image-section2.gif" alt="Container 4 image here">
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </section>
+</div>
+<script>
+  // process
+const processWrapper = document.querySelector(".process-wrapper");
+const processSidebar = document.querySelector(".process-sidebar");
+const navItems = document.querySelectorAll(".process-sidebar li");
+const sections = document.querySelectorAll(".process-content-block");
+
+function handleScroll() {
+  const scrollY = window.scrollY;
+  const processTop = processWrapper.offsetTop;
+  const processHeight = processWrapper.offsetHeight;
+  const processBottom = processTop + processHeight;
+
+  // Show/hide sidebar when inside/outside process
+  if (scrollY + window.innerHeight / 2 >= processTop && scrollY <= processBottom - window.innerHeight / 2) {
+    processSidebar.classList.add("visible");
+  } else {
+    processSidebar.classList.remove("visible");
+    navItems.forEach(li => li.classList.remove("active")); // clear highlight
+    return;
   }
 
-  40% {
-    transform: translateX(-50%) translateY(-10px);
-  }
-
-  60% {
-    transform: translateX(-50%) translateY(-5px);
-  }
-}
-
-
-
-
-
-.testimonial-section {
-  width: 100%;
-  padding: 15vh 6vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* REMOVE height: 100vh */
-  flex-direction: column;
-}
-
-.testimonial-container {
-  width: 100%;
-  /* REMOVE height: 100% */
-  display: flex;
-  flex-direction: column;
-}
-
-.testimonial-title {
-  font-size: 6.5rem;
-  font-weight: bold;
-  width: 65%;
-  text-align: left;
-  border-bottom:  solid 2px black;
-  padding-bottom: 1vh;
-  margin-bottom: 5vh;
-}
-
-.testimonial-boxes {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* ✅ 3 columns */
-  gap: 40px;
-  margin-top: 5vh;
-}
-
-.testimonial-box {
-  background-image: url(photo/redd.jpg);
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  border-radius: 20px;
-  padding: 5vh 5vw;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease;
-  overflow: hidden; /* Ensure the overlay stays within bounds */
-}
-
-.testimonial-box::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.686); /* Black overlay with 40% opacity */
-  z-index: 0; /* Sits behind the content */
-}
-
-.testimonial-box * {
-  position: relative;
-  z-index: 1;
-}
-
-
-
-.testimonial-box:hover {
-  transform: scale(1.03);
-}
-
-.testimonial-icon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto;
-  border-radius: 50%;
-  background-color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.testimonial-icon i {
-  color: #fff;
-  font-size: 2rem;
-}
-
-.testimonial-info {
-  font-weight: bold;
-  margin: 2rem;
-  font-size: 1.3rem;
-  color: white;
-}
-
-.testimonial-quote {
-  font-size: 1.2rem;
-  color: #ffffff;
-  line-height: 1.4;
-}
-@media screen and (max-width: 1200px){
-  .testimonial-title{
-    font-size: 5rem;
-    margin-top: 10vh;
-  }
-}
-@media screen and (max-width: 900px){
-    .scroll-arrow {
-    font-size: 1.3rem;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    position: absolute;
-    right: 40%;
-    bottom: 30%;
-    transform: translateX(-50%);
-    width: 85px;
-    height: 85px;
-    background: transparent;
-    border-radius: 50%;
-    border: solid 1px rgb(0, 0, 0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: bounce 1.5s infinite;
-    z-index: 90;
-    transition: transform 0.3s ease, background 0.3s ease;
-  }
-  .testimonial-boxes{
-    padding-top: 10vh;
+  // Highlight the correct nav item
+  let currentId = "";
+  sections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    const middleY = rect.top + rect.height / 2;
+    if (middleY >= 0 && middleY <= window.innerHeight) {
+      currentId = section.id;
     }
+  });
+
+  navItems.forEach(li => {
+    li.classList.remove("active");
+    if (li.dataset.target === currentId) {
+      li.classList.add("active");
+    }
+  });
 }
 
-@media screen and (max-width: 900px) {
-  .testimonial-title {
-    font-size: 4.5rem;
-    width: 80%;
-    text-align: center;
-    margin: 0 auto 5vh auto;
-  }
-
-  .testimonial-boxes {
-    grid-template-columns: repeat(2, 1fr); /* Change to 2 columns */
-    gap: 30px;
-  }
-
-  .testimonial-box {
-    padding: 4vh 4vw;
-  }
-
-  .testimonial-info {
-    font-size: 1.1rem;
-  }
-
-  .testimonial-quote {
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .scroll-arrow {
-    font-size: 1.3rem;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    position: absolute;
-    right: 37%;
-    bottom: 35%;
-    transform: translateX(-50%);
-    width: 85px;
-    height: 85px;
-    background: transparent;
-    border-radius: 50%;
-    border: solid 1px rgb(0, 0, 0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: bounce 1.5s infinite;
-    z-index: 90;
-    transition: transform 0.3s ease, background 0.3s ease;
-  }
-  .testimonial-title {
-    font-size: 3.5rem;
-    width: 90%;
-    text-align: center;
-    margin-bottom: 15vh;
-  }
-
-  .testimonial-boxes {
-    grid-template-columns: 1fr; /* Stack in single column */
-    gap: 25px;
-  }
-
-  .testimonial-box {
-    padding: 3vh 5vw;
-  }
-
-  .testimonial-icon {
-    width: 65px;
-    height: 65px;
-  }
-
-  .testimonial-icon i {
-    font-size: 1.6rem;
-  }
-
-  .testimonial-info {
-    font-size: 1rem;
-    margin: 1.5rem;
-  }
-
-  .testimonial-quote {
-    font-size: 0.95rem;
-  }
-}
-
-@media screen and (max-width: 600px) {
-      .scroll-arrow {
-    font-size: 1.3rem;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    position: absolute;
-    right: 35%;
-    bottom: 35%;
-    transform: translateX(-50%);
-    width: 85px;
-    height: 85px;
-    background: transparent;
-    border-radius: 50%;
-    border: solid 1px rgb(0, 0, 0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: bounce 1.5s infinite;
-    z-index: 90;
-    transition: transform 0.3s ease, background 0.3s ease;
-  }
-}
-
-@media screen and (max-width: 500px) {
-    .testimonial-title {
-    font-size: 2.5rem;
-    width: 80%;
-    text-align: center;
-    margin: 0 auto 5vh auto;
-  }
-      .scroll-arrow {
-    font-size: 1.3rem;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    position: absolute;
-    right: 33%;
-    bottom: 47%;
-    transform: translateX(-50%);
-    width: 70px;
-    height: 70px;
-    background: transparent;
-    border-radius: 50%;
-    border: solid 1px rgb(0, 0, 0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: bounce 1.5s infinite;
-    z-index: 90;
-    transition: transform 0.3s ease, background 0.3s ease;
-  }
-}
-
-@media screen and (max-width: 400px) {
-      .scroll-arrow {
-    font-size: 1.3rem;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    position: absolute;
-    right: 32%;
-    bottom: 40%;
-    transform: translateX(-50%);
-    width: 65px;
-    height: 65px;
-    background: transparent;
-    border-radius: 50%;
-    border: solid 1px rgb(0, 0, 0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: bounce 1.5s infinite;
-    z-index: 90;
-    transition: transform 0.3s ease, background 0.3s ease;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Contact Form Section */
-.contact-form {
-  padding: 4vh 5vh;
-  text-align: center;
-  height: 90vh;
-  font-family: var(--ff-chakra-petch);
-}
-
-.contact-form h2 {
-  font-size: 3.5rem;
-  color: #ffffffd0;
-}
-
-
-
-/* Form Styles */
-.contact-form form {
-  max-width: 90vh;
-  margin: 0 auto;
-  margin-top: 5vh;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-/* Inputs & Textarea */
-.contact-form input,
-.contact-form textarea {
-  padding: 12px 15px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-  width: 100%;
-  transition: border 0.3s, box-shadow 0.3s;
-}
-
-.contact-form input,
-.contact-form textarea {
-  transition: all 0.8s ease;
-}
-
-.contact-form input:hover,
-.contact-form textarea:hover {
-  transform: scale(1.03);
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #000000;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  outline: none;
-}
-
-
-.contact-button {
-  position: relative;
-  display: flex;
-  /* changed from inline-flex */
-  align-items: center;
-  justify-content: center;
-  /* horizontally center text */
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-decoration: none;
-  background-color: rgb(0, 0, 0) !important;
-  border-radius: 5px;
-  padding: 1rem 6rem;
-  color: rgb(255, 255, 255) !important;
-  border: solid 0.5px white;
-  overflow: hidden;
-  transition: transform 0.7s ease;
-
-}
-
-
-/* Underline effect */
-.contact-button::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  top: 70%;
-  height: 2px;
-  background: linear-gradient(135deg, #8c8c8c 0%, #000000 100%);
-  transition: width 0.7s ease-in-out, border 0.7s, background-color 0.7s ease;
-}
-
-.contact-button:hover {
-  transform: scale(1.02);
-  background-color: aliceblue !important;
-  color: black !important;
-  border: 1px solid black !important;
-}
-
-.contact-button:hover::after {
-  width: 100%;
-}
-
-/* Reverse effect when un-hovering */
-.contact-button::after {
-  transition: width 0.5s ease-in-out;
-}
-
-.contact-button:not(:hover)::after {
-  width: 0;
-  transition: width 0.5s ease-in-out 0.2s;
-}
-
-
-
-
-
-
-
-
-
-.popup-message {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.6);
-  justify-content: center;
-  align-items: center;
-}
-
-.popup-content {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 12px;
-  text-align: center;
-  max-width: 90%;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
-
-.popup-content button {
-  margin-top: 1rem;
-  padding: 0.5rem 1.5rem;
-  background: #111;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-@media (max-width: 900px) {
-  .contact-form {
-    padding: 20vh 4vh;
-    height: auto;
-    background-size: 100px auto;
-  }
-
-  .contact-form h2 {
-    font-size: 2.5rem;
-  }
-
-  .contact-form form {
-    max-width: 90%;
-  }
-}
-
-@media (max-width: 768px) {
-  .contact-form {
-    padding: 10vh 3vh;
-    background-size: 80px auto;
-    background-position: bottom center;
-  }
-
-  .contact-form h2 {
-    font-size: 2rem;
-  }
-
-  .contact-form form {
-    margin-top: 4vh;
-    gap: 12px;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 0.95rem;
-    padding: 10px 12px;
-  }
-
-  .contact-form button {
-    font-size: 0.95rem;
-    padding: 10px;
-  }
-}
-
-
-
-
-.back-to-top {
-
-  color: rgb(255, 255, 255) !important;
-  border: solid 1px rgb(255, 255, 255) !important;
-
-}
-
-.back-to-top:hover {
-  background: #ffffff !important;
-  color: rgb(0, 0, 0) !important;
-}
-footer:hover{
-  background-color: #000000 !important;
-}
+window.addEventListener("scroll", handleScroll);
+
+
+// Smooth scroll on click
+navItems.forEach(li => {
+  li.addEventListener("click", () => {
+    const id = li.dataset.target;
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
+});
+
+window.addEventListener("scroll", handleScroll);
+window.addEventListener("load", handleScroll);  
+
+</script>
+
+
+
+
+
+
+
+<section class="testimonial-section hero-section">
+  <div class="testimonial-container">
+    <h1 class="testimonial-title title-animate">What Our Customers Have to Say</h1>
+
+    <div class="testimonial-boxes">
+
+      <div class="testimonial-box">
+        <div class="testimonial-icon"><i class="fa-solid fa-building"></i></div>
+        <div class="testimonial-info">Container 1 <br> Somewhere, USA</div>
+        <p class="testimonial-quote">"This is some short dummy description text that goes here 1234.This is some short dummy description text that goes here 1234."</p>
+      </div>
+
+      <div class="testimonial-box">
+        <div class="testimonial-icon"><i class="fa-solid fa-building"></i></div>
+        <div class="testimonial-info">Container 2 <br> Somewhere, USA</div>
+        <p class="testimonial-quote">"This is some short dummy description text that goes here 1234.This is some short dummy description text that goes here 1234."</p>
+      </div>
+
+      <div class="testimonial-box">
+        <div class="testimonial-icon"><i class="fa-solid fa-building"></i></div>
+        <div class="testimonial-info">Container 3 <br> Somewhere, USA</div>
+        <p class="testimonial-quote">"This is some short dummy description text that goes here 1234.This is some short dummy description text that goes here 1234."</p>
+      </div>
+
+      <div class="testimonial-box">
+        <div class="testimonial-icon"><i class="fas fa-home"></i></div>
+        <div class="testimonial-info">Container 4 <br> Somewhere, USA</div>
+        <p class="testimonial-quote">"This is some short dummy description text that goes here 1234.This is some short dummy description text that goes here 1234."</p>
+      </div>
+
+      <div class="testimonial-box">
+        <div class="testimonial-icon"><i class="fas fa-home"></i></div>
+        <div class="testimonial-info">Container 5 <br> Somewhere, USA</div>
+        <p class="testimonial-quote">"This is some short dummy description text that goes here 1234.This is some short dummy description text that goes here 1234."</p>
+      </div>
+
+      <div class="testimonial-box">
+        <div class="testimonial-icon"><i class="fas fa-home"></i></div>
+        <div class="testimonial-info">Container 6 <br> Somewhere, USA</div>
+        <p class="testimonial-quote">"This is some short dummy description text that goes here 1234.This is some short dummy description text that goes here 1234."</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+  <section class="contact-form scrolltome" id="contact">
+    <h2 class="scroll-animateY">Contact <span style="border-bottom: solid 2px white;">Us</span> Today!</h2>
+  
+    <form id="contactForm scroll-animateY">
+      <label class="scroll-animate">
+        <input type="text" name="name" required placeholder="First and Last name">
+      </label>
+  
+      <label class="scroll-animate">
+        <input type="tel" name="phone" required placeholder="Phone">
+      </label>
+  
+      <label class="scroll-animate">
+        <input type="email" name="email" required placeholder="Email">
+      </label>
+  
+      <label class="scroll-animate">
+        <input type="text" name="location" required placeholder="Location">
+      </label>
+  
+      <label class="scroll-animate">
+        <textarea name="project" rows="4" placeholder="Project Overview (Optional)"></textarea>
+      </label>
+  
+      <button class="scroll-animate contact-button" type="submit">Send</button>
+    </form>
+
+
+    <!-- Popup message -->
+    <div id="popupMessage" class="popup-message">
+      <div class="popup-content">
+        <h3>Thank You!</h3>
+        <p>Your message has been sent. We’ll be in touch soon.</p>
+        <button onclick="closePopup()">Close</button>
+      </div>
+    </div>  
+</section>
+
+  
+
+
+
+<div class="back-to-top" onclick="scrollToTop()">
+  <i class="fa-solid fa-arrow-up"></i>
+</div>
+
+
+
+
+
+<!-- Footer -->
+  <div class="footer-grid">
+    <div class="footer-col scroll-animate scroll-animateR">
+      <div class="footer-logo "><img src="photo/riot-logo-white.png" alt="WestCraft Logo"></div>
+      <p class="copyright-footer">&copy; 2025 RiotDefense. All rights reserved.</p>
+    </div>
+    <div class="footer-col footer-col-social scroll-animate scroll-animateR">
+      <h4>Social</h4>
+      <hr class="footer-title-line">
+    <div class="socials">
+        <a href="https://www.facebook.com" target="_blank"><i class="fa-solid fa-phone"></i></a>
+        <span class="footer-dash">|</span>
+        <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-google"></i></a></a>
+        <span class="footer-dash">|</span>
+        <a href="https://www.instagram.com/new_image_az/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <span class="footer-dash">|</span>
+        <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    </div>
+    </div>
+    <div class="footer-col scroll-animateY">
+      <h4>Contact Info</h4>
+      <hr class="footer-title-line">
+      <p>Email: info@riotdefense.com</p>
+      <p>Phone: (602) 810-7892</p>
+    </div>
+    <div class="footer-col scroll-animateY">
+      <h4>Riot Defense</h4>
+      <hr class="footer-title-line">
+      <p class="footer-disclaimer">Powered by Riot Defense — This is some short dummy description text that goes here 1234.This is some short dummy description text that goes here 1234.</p>
+    </div>
+  <!-- FOOTER LEGAL ROW -->
+  <div class="footer-legal-container scroll-animateY">
+    <div class="footer-legal-links">
+      <a href="term.html" target="_blank">Terms</a>
+      <a href="privacy.html" target="_blank">Privacy</a>
+      <a href="legal.html" target="_blank">Legal</a>
+    </div>
+  </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<!--FAQ section-->
+<script>
+const faqQuestions = document.querySelectorAll('.faq-question');
+
+faqQuestions.forEach((question) => {
+  question.addEventListener('click', () => {
+    const currentItem = question.parentElement;
+    const currentAnswer = currentItem.querySelector('.faq-answer');
+
+    const isOpen = currentItem.classList.contains('active');
+
+    // Close all open items
+    document.querySelectorAll('.faq-item.active').forEach((item) => {
+      if (item !== currentItem) {
+        item.classList.remove('active');
+        const answer = item.querySelector('.faq-answer');
+        answer.style.height = answer.scrollHeight + 'px';
+        // Force reflow for transition
+        void answer.offsetHeight;
+        answer.style.height = '0';
+      }
+    });
+
+    // Toggle current item
+    if (!isOpen) {
+      currentItem.classList.add('active');
+      currentAnswer.style.height = currentAnswer.scrollHeight + 'px';
+    } else {
+      currentAnswer.style.height = currentAnswer.scrollHeight + 'px';
+      // Force reflow for transition
+      void currentAnswer.offsetHeight;
+      currentAnswer.style.height = '0';
+      currentItem.classList.remove('active');
+    }
+  });
+});
+</script>
+
+
+<!--pop up message-->
+  <script>
+    const form = document.getElementById('contactForm');
+    const popup = document.getElementById('popupMessage');
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      const response = await fetch('https://formspree.io/f/mpwrjngo', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: formData
+      });
+
+      if (response.ok) {
+        form.reset();
+        popup.style.display = 'flex';
+      } else {
+        alert('There was an error submitting the form. Please try again.');
+      }
+    });
+
+    function closePopup() {
+      popup.style.display = 'none';
+    }
+  </script>
+
+
+<!--form miss spelling-->
+<script>
+  document.querySelector('form').addEventListener('submit', function (e) {
+    const phone = document.querySelector('input[name="phone"]').value;
+    if (!/^[\d\s()+-]+$/.test(phone)) {
+      alert('Please enter a valid phone number.');
+      e.preventDefault();
+    }
+  });
+</script>
+
+
+<!--header-->
+  <script>
+    const header = document.getElementById("main-header");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        header.classList.remove("transparent");
+        header.classList.add("scrolled");
+      } else {
+        header.classList.add("transparent");
+        header.classList.remove("scrolled");
+      }
+    });
+  </script>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+
+  <script>AOS.init();</script>
+
+
+  <script src="script.js"></script>  
+</body>
+</html>
