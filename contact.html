@@ -27,7 +27,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Goldman:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+
+<script> 
+    function onScrollHideHeader() {
+    const currentScroll = window.scrollY;
+    if (currentScroll > 150) {
+      if (currentScroll > lastScrollY) {
+        header.classList.add('header--hide');
+      } else {
+        header.classList.remove('header--hide');
+      }
+    } else {
+      header.classList.remove('header--hide');
+    }
+    lastScrollY = currentScroll;
+  }
+</script>
+  
 <!-- Header -->
 <header class="header transparent" id="main-header">
     <a href="#" class="header__logo">
@@ -83,6 +99,176 @@
 
 
 
+
+
+
+
+
+<!--Our Process-->
+<div class="process-wrapper" id="locations-section">
+  <h2 class="process-heading">Schedule a Demo</h2>
+  <hr class="process-heading-line">
+  <p class="process-subheading">Want to see the strength of our products for yourself? At Riot Defense, we believe in showing—not
+    just telling—why our security film and shutters are the best in the business.</p>
+
+  <section class="process-section">
+    <div class="process-container">
+      <!-- Sidebar -->
+      <div class="process-sidebar">
+        <ul>
+          <li data-target="Discovery" class="active">Schedule</li>
+          <li data-target="design">Demonstration</li>
+          <li data-target="Consultation">Hands-On</li>
+          <li data-target="Final">Q&A</li>
+        </ul>
+      </div>
+
+      <!-- Main Content -->
+          <div class="process-content">
+            <section id="Discovery" class="process-content-block">
+              <div class="process-inner">
+                <div class="process-left-image ">
+                    <img src="photo/placeholder-image-section2.gif" alt="Container 1 image here">
+                </div>
+            <div class="process-feature-content">
+              <h3>Schedule Your Demo</h3>
+              <hr class="process-title-line">
+              <p>Contact us by phone, email, or through our website to book a demonstration at a time that works for you.</p>
+              <ul>
+                <li><strong>✔ container 1 step 1:</strong>This is some sort of dummy txt. Text will go here! This is some sort of dummy txt. Text will go here!</li>
+                <li><strong>✔ container 2 step 1:</strong> This is some sort of dummy txt. Text will go here! This is some sort of dummy txt. Text will go here!</li>
+                <li><strong>✔ container 3 step 1:</strong>  This is some sort of dummy txt. Text will go here! This is some sort of dummy txt. Text will go here!</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="design" class="process-content-block">
+          <div class="process-inner">
+            <div class="process-feature-content">
+              <h3>On-Site Demonstration</h3>
+              <hr class="process-title-line">
+              <p>One of our experts will come to your location with product samples and perform a live demo. We’ll
+                showcase the durability, impact resistance, and security features that set our products apart. </p>
+              <ul>
+                <li><strong>✔ container 1 step 1:</strong>This is some sort of dummy txt. Text will go here! This is some sort of dummy txt. Text will go here!</li>
+                <li><strong>✔ container 2 step 1:</strong> This is some sort of dummy txt. Text will go here! This is some sort of dummy txt. Text will go here!</li>
+                <li><strong>✔ container 3 step 1:</strong>  This is some sort of dummy txt. Text will go here! This is some sort of dummy txt. Text will go here!</li>
+            </ul>
+            </div>
+            <div class="process-left-image">
+                <img src="photo/placeholder-image-section2.gif" alt="Container 2 image here">
+            </div>
+          </div>
+        </section>
+
+        <section id="Consultation" class="process-content-block">
+          <div class="process-inner">
+            <div class="process-left-image">
+                <img src="photo/placeholder-image-section2.gif" alt="Container 3 image here">
+            </div>
+            <div class="process-feature-content">
+              <h3>Hands-On Experience</h3>
+              <hr class="process-title-line">
+                  <p>See firsthand how our film and shutters hold up against force, weather conditions, and real-world
+                    scenarios—proving the level of protection your property can have.</p>
+                  <ul>
+                    <li><strong>✔ container 1 step 1:</strong>This is some sort of dummy txt. Text will go here! This is some sort of dummy txt. Text will go here!</li>
+                    <li><strong>✔ container 2 step 1:</strong> This is some sort of dummy txt. Text will go here! This is some sort of dummy txt. Text will go here!</li>
+                    <li><strong>✔ container 3 step 1:</strong>  This is some sort of dummy txt. Text will go here! This is some sort of dummy txt. Text will go here!</li>
+                  </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="Final" class="process-content-block">
+          <div class="process-inner">
+            <div class="process-feature-content">
+              <h3>Q&A and Recommendations</h3>
+              <hr class="process-title-line">
+                <p>After the demo, we’ll answer your questions and provide professional recommendations tailored to
+                   your property’s needs.</p>
+                <ul>
+                    <li><strong>✔ container 1 step 1:</strong>This is some sort of dummy txt. Text will go here! This is some sort of dummy txt. Text will go here!</li>
+                    <li><strong>✔ container 2 step 1:</strong> This is some sort of dummy txt. Text will go here! This is some sort of dummy txt. Text will go here!</li>
+                    <li><strong>✔ container 3 step 1:</strong>  This is some sort of dummy txt. Text will go here! This is some sort of dummy txt. Text will go here!</li>
+                </ul>
+            </div>
+            <div class="process-left-image ">
+                <img src="photo/placeholder-image-section2.gif" alt="Container 4 image here">
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </section>
+</div>
+<script>
+  // process
+const processWrapper = document.querySelector(".process-wrapper");
+const processSidebar = document.querySelector(".process-sidebar");
+const navItems = document.querySelectorAll(".process-sidebar li");
+const sections = document.querySelectorAll(".process-content-block");
+
+function handleScroll() {
+  const scrollY = window.scrollY;
+  const processTop = processWrapper.offsetTop;
+  const processHeight = processWrapper.offsetHeight;
+  const processBottom = processTop + processHeight;
+
+  // Show/hide sidebar when inside/outside process
+  if (scrollY + window.innerHeight / 2 >= processTop && scrollY <= processBottom - window.innerHeight / 2) {
+    processSidebar.classList.add("visible");
+  } else {
+    processSidebar.classList.remove("visible");
+    navItems.forEach(li => li.classList.remove("active")); // clear highlight
+    return;
+  }
+
+  // Highlight the correct nav item
+  let currentId = "";
+  sections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    const middleY = rect.top + rect.height / 2;
+    if (middleY >= 0 && middleY <= window.innerHeight) {
+      currentId = section.id;
+    }
+  });
+
+  navItems.forEach(li => {
+    li.classList.remove("active");
+    if (li.dataset.target === currentId) {
+      li.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", handleScroll);
+
+
+// Smooth scroll on click
+navItems.forEach(li => {
+  li.addEventListener("click", () => {
+    const id = li.dataset.target;
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
+});
+
+window.addEventListener("scroll", handleScroll);
+window.addEventListener("load", handleScroll);  
+
+</script>
+
+
+
+
+
+
+
 <section class="testimonial-section hero-section">
   <div class="testimonial-container">
     <h1 class="testimonial-title title-animate">What Our Customers Have to Say</h1>
@@ -101,7 +287,7 @@
         <p class="testimonial-quote">"This is some short dummy description text that goes here 1234.This is some short dummy description text that goes here 1234."</p>
       </div>
 
-      <div class="testimonial-box scrolltome">
+      <div class="testimonial-box">
         <div class="testimonial-icon"><i class="fa-solid fa-building"></i></div>
         <div class="testimonial-info">Container 3 <br> Somewhere, USA</div>
         <p class="testimonial-quote">"This is some short dummy description text that goes here 1234.This is some short dummy description text that goes here 1234."</p>
@@ -143,7 +329,7 @@
 
 
 <footer>
-  <section class="contact-form" id="contact">
+  <section class="contact-form scrolltome" id="contact">
     <h2 class="scroll-animateY">Contact <span style="border-bottom: solid 2px white;">Us</span> Today!</h2>
   
     <form id="contactForm scroll-animateY">
@@ -215,7 +401,8 @@
     <div class="footer-col scroll-animateY">
       <h4>Contact Info</h4>
       <hr class="footer-title-line">
-      <p>Email: example@example.com</p>
+      <p>Email: info@riotdefense.com</p>
+      <p>Phone: (602) 810-7892</p>
     </div>
     <div class="footer-col scroll-animateY">
       <h4>Riot Defense</h4>
