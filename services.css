@@ -8,29 +8,34 @@
 
 
 
-.header__toggle {
-  color: #ffffff !important;
-}
+
 .header {
-  background-color: #000 !important;
-}
-.header:hover {
-  background-color: #111 !important;
-}
-
-  .nav__link{
-    font-size: 1.1rem;
-    color: rgb(255, 255, 255) !important;
-    display: block;
-  }
-
-.cta{
-  background-color: white !important;
-  color: #000 !important;
+  background-color: #ffffff !important;
 }
 .socials-header a{
-  color: white !important;
+  color: #000 !important;
 }
+.cta {
+  background: transparent;
+  color: rgb(255, 255, 255) !important;
+  background-color: #000000 !important;
+  border: none;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.5s ease;
+  display: inline-block;
+  font-weight: 500;
+}
+.header:hover .cta:hover {
+  background: transparent !important;
+  border: 0.5px solid rgb(0, 0, 0) !important;
+  color: rgb(0, 0, 0) !important;
+  transform: scale(1.02);
+}
+
+
+
 
 body{
   overflow-x: hidden;
@@ -52,33 +57,6 @@ body{
 
 
 
-.header {
-  background-color: #000 !important;
-}
-.header:hover {
-  background-color: #111 !important;
-}
-
-  .nav__link{
-    font-size: 1.1rem;
-    color: rgb(255, 255, 255);
-    display: block;
-  }
-.header:hover .cta {
-  background: transparent;
-  color: rgb(0, 0, 0);
-  background-color: #ffffff;
-  border: none;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  border-radius: 30px;
-  transition: all 0.5s ease;
-  display: inline-block;
-  font-weight: 500;
-}
-.header:hover .socials-header a{
-  color: #ffffff;
-}
 
 
 
