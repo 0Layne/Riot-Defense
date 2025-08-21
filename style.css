@@ -284,10 +284,25 @@ body{
   font-weight: 100;
   margin: 0 auto;
   margin-bottom: 40px;
+  text-align: left;
+  margin: 0px;
   line-height: 1;
   position: relative;
   z-index: 3;
   width: 80%;
+}
+.hero-left::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* fill the section */
+  background: url(photo/black-shield.png) no-repeat center;
+  background-size: 90%; /* adjust size */
+  background-position: center right;
+  opacity: 0.05; /* watermark transparency */
+  z-index: 1; /* behind text */
+}
+.hero-buttons a{
+  font-size: 1.3rem;
 }
 .hero-slogan{
   font-size: 1.5rem;
@@ -325,7 +340,7 @@ body{
     position: absolute;
     inset: 0; /* fill the section */
     background: url(photo/black-shield.png) no-repeat center;
-    background-size: 70%; /* adjust size */
+    background-size: 50%; /* adjust size */
     background-position: bottom ;
   }
   .line-target::after {
@@ -353,10 +368,70 @@ body{
 
   .scroll-arrow {
     left: 50%;
-    bottom: 100px;
-  }
+  bottom: 50px;
+  width: 55px;
+  height: 55px;
+  background: #ffffff;
+  color: #000;
+}
 }
 
+@media (max-width: 1099px) {
+  .hero-section {
+    flex-direction: column;
+    overflow-x: hidden;
+    padding-top: 10vh;
+  }
+
+  .hero-left {
+    padding: 3vh 30px;
+    padding-top: 7vh;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: 5rem;
+    width: 90%;
+    text-align: center;
+  }
+  .hero-left::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* fill the section */
+    background: url(photo/black-shield.png) no-repeat center;
+    background-size: 45%; /* adjust size */
+    background-position: bottom ;
+  }
+  .line-target::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30vh;
+  }
+
+  .hero-left p {
+    margin: 0 auto 30px auto;
+  }
+
+  .hero-buttons a{
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+  }
+
+  .hero-right {
+    min-height: 300px;
+  }
+
+.scroll-arrow {
+  bottom: 50px;
+  width: 55px;
+  height: 55px;
+  background: #ffffff;
+  color: #000;
+}
+}
 
 @media (max-width: 900px) {
   .hero-section {
@@ -366,7 +441,8 @@ body{
   }
 
   .hero-left {
-    padding: 8vh 30px;
+    padding: 2vh 30px;
+    padding-top: 5vh;
     text-align: center;
     align-items: center;
   }
@@ -380,8 +456,8 @@ body{
     position: absolute;
     inset: 0; /* fill the section */
     background: url(photo/black-shield.png) no-repeat center;
-    background-size: 60%; /* adjust size */
-    background-position: top center ;
+    background-size: 50%; /* adjust size */
+    background-position: bottom ;
   }
   .line-target::after {
     left: 50%;
@@ -393,20 +469,24 @@ body{
     margin: 0 auto 30px auto;
   }
 
-  .hero-buttons {
+  .hero-buttons a{
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    font-size: 1rem;
   }
 
   .hero-right {
-    min-height: 400px;
+    min-height: 300px;
   }
 
-  .scroll-arrow {
-    left: 50%;
-    bottom: 100px;
-  }
+.scroll-arrow {
+  bottom: 50px;
+  width: 55px;
+  height: 55px;
+  background: #ffffff;
+  color: #000;
+}
 }
 
 @media (max-width: 770px) {
@@ -431,7 +511,7 @@ body{
     height: 1px;
   }
 
-  .btn {
+  .hero-buttons a{
     font-size: 1rem;
     padding: 10px 2vh;
   }
@@ -446,10 +526,52 @@ body{
     height: 10%;
   }
   .scroll-arrow {
-    bottom: 100px;
-  }
+  bottom: 70px;
+  width: 55px;
+  height: 55px;
+  background: #ffffff;
+  color: #000;
+}
 }
 
+@media (max-width: 550px) {
+  .hero-left::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* fill the section */
+  background: url(photo/black-shield.png) no-repeat center;
+  background-size: 60%; /* adjust size */
+  background-position: center;
+  opacity: 0.05; /* watermark transparency */
+  z-index: 1; /* behind text */
+}
+  .hero-title {
+    font-size: 3rem;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+  }
+    .line-target::after {
+  content: "";
+   position: absolute;
+   width: 0px;
+   height: 0px;
+   background-color: rgba(255, 255, 255, 0);
+   left: 0%;
+   bottom: 0px;
+  }
+  .hero-left{
+    padding: 1vh;
+    padding-top: 5vh;
+  }
+  .scroll-arrow {
+    bottom: 100px;
+  }
+    .btn {
+    font-size: 1rem !important;
+    padding: 10px 2vh !important;
+  }
+}
 
 @media (max-width: 450px) {
   .hero-left::before {
@@ -1619,7 +1741,13 @@ body{
   width: 400px;
   height: 300px;
 }
-
+.timeline-content img{
+  border-radius: 15px;
+  transition: all 0.5s;
+}
+.timeline-content img:hover{
+  transform: scale(1.05);
+}
 .timeline-item.left .text {
   margin-left: auto;
   background: white;
