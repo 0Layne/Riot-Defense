@@ -168,6 +168,24 @@ body{
 /* ============================
    Devices smaller than 1000px
    ============================ */
+@media (max-width: 1200px) {
+  /* Stack everything in one column */
+  .service-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .service-images {
+    margin-top: 40px;
+  }
+
+  /* Ensure reverse layout does not reverse on small screens */
+  .service-showcase.reverse .service-images {
+    order: 0; /* Reset order */
+    margin-bottom: 30px; /* Keep spacing consistent */
+  }
+}
+
 @media (max-width: 1000px) {
   /* Stack everything in one column */
   .service-wrapper {
@@ -456,6 +474,17 @@ body{
 }
 
 /* Responsive */
+@media (max-width: 1200px) {
+  .advantage-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .adv-card {
+    max-width: 90%;
+    margin: auto;
+  }
+}
+
 @media (max-width: 900px) {
   .advantage-list {
     flex-direction: column;
