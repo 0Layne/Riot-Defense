@@ -697,6 +697,64 @@ body{
   position: relative;
 }
 
+
+
+
+/* Left panel background image */
+.service-panel.panel-left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* full panel width */
+  height: 100%;
+  background: url('photo/service-bg-line.png') no-repeat left center;
+  background-size: 70%;
+  opacity: 0.4;
+  z-index: 0; /* behind content */
+  pointer-events: none;
+  /* fade out to the right so text is visible */
+  mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%);
+}
+
+/* Keep content above the pseudo-element */
+.service-panel.panel-left > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+
+/* Left panel background image */
+.service-panel.panel-right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* full panel width */
+  height: 100%;
+  background: url('photo/service-bg-line.png') no-repeat left center;
+  background-size: 70%;
+  opacity: 0.4;
+  z-index: 0; /* behind content */
+  pointer-events: none;
+  /* fade out to the right so text is visible */
+  mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%);
+}
+
+/* Keep content above the pseudo-element */
+.service-panel.panel-right > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+
+
 /* Service Panels */
 .service-panel {
   display: grid;
@@ -845,10 +903,22 @@ body{
   .service-text p {
     font-size: 1.1rem;
   }
+  
+.service-panel.panel-left::before, .service-panel.panel-right::before{
+  background-size: 100%;
+    mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%);
+}
 }
 
 /* Tablets & large phones (601px - 900px) */
 @media (max-width: 900px) {
+    .service-panel.panel-left::before {
+    display: none;
+  }
+    .service-panel.panel-right::before {
+    display: none;
+  }
   .services-unique {
     padding: 15vh 15px 15vh;
   }
@@ -1025,6 +1095,65 @@ body{
 }
 
 
+
+
+
+
+
+
+.dealerships-section {
+  color: #000;
+  padding: 5rem 5rem;
+  text-align: center;
+  overflow: hidden;
+  font-family: var(--ff-chakra-petch);
+}
+.dealerships-section h2{
+  font-size: 3rem;
+  padding-bottom: 3rem;
+  letter-spacing: 5px;
+}
+
+.logo-carousel {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.logo-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 20s linear infinite;
+}
+
+.logo-track img {
+  height: 60px;
+  margin-right: 45px;
+  flex: 0 0 10%;
+  width: 140px;
+  height: 100px;
+  object-fit: contain;
+  transition: filter 0.5s ease;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media screen and (max-width:900px) {
+  .logo-track img {
+     flex: 0 0 1%;
+  }
+  .dealerships-section{
+    padding: 0px;
+    padding-bottom: 10rem;
+    padding-top: 10rem;
+  }
+}
 
 
 
