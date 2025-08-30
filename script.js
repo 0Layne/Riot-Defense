@@ -123,27 +123,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('resize', checkWidthAndApplyBehavior);
 
-  // Hamburger menu logic
-  const toggleMenu = document.getElementById('nav-toggle');
-  const closeMenu = document.getElementById('nav-close');
-  const navMenu = document.getElementById('nav-menu');
+// Hamburger menu logic
+const toggleMenu = document.getElementById('nav-toggle');
+const closeMenu = document.getElementById('nav-close');
+const navMenu  = document.getElementById('nav-menu');
 
-  toggleMenu.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
+// open/close the slideout
+toggleMenu.addEventListener('click', () => {
+  navMenu.classList.toggle('show');
+});
+closeMenu.addEventListener('click', () => {
+  navMenu.classList.remove('show');
+});
+
+// --- Dropdown handling (mobile + desktop click) ---
+const dropdownToggle = document.querySelector('.dropdown-toggle');
+const dropdownParent = dropdownToggle ? dropdownToggle.closest('.nav-dropdown') : null;
+
+if (dropdownToggle && dropdownParent) {
+  const toggleDropdown = (e) => {
+    // prevent the '#' navigation + keep the slideout open
+    e.preventDefault();
+    e.stopPropagation();
+    dropdownParent.classList.toggle('open');
+  };
+
+  // support touch + click
+  ['click', 'touchstart'].forEach(evt => {
+    dropdownToggle.addEventListener(evt, toggleDropdown, { passive: false });
   });
+}
 
-  closeMenu.addEventListener('click', () => {
-    navMenu.classList.remove('show');
+// Close slideout when clicking a normal nav link (NOT the dropdown toggle)
+navMenu.querySelectorAll('.nav__link').forEach(link => {
+  link.addEventListener('click', function (e) {
+    // If it’s the dropdown toggle, we already handled it above — do nothing here
+    if (this.classList.contains('dropdown-toggle')) return;
+    navMenu.classList.remove('show'); // close after navigating
   });
+});
 
-  const navLink = document.querySelectorAll('.nav__link');
-  navLink.forEach(n =>
-    n.addEventListener('click', function () {
-      navLink.forEach(n => n.classList.remove('active'));
-      this.classList.add('active');
-      navMenu.classList.remove('show');
-    })
-  );
 
   // ScrollTo Section
   window.scrollToSection = function (sectionClass) {
