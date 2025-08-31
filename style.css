@@ -2317,6 +2317,7 @@ body{
   font-size: 5.5rem;
   position: relative;
   z-index: 2;
+  padding: 1vh;
 }
 
 /* Watermark background */
@@ -2551,8 +2552,8 @@ body{
     padding: 50px 10px;
   }
   .proc-title {
-    font-size: 2.2rem;
-    margin-bottom: 10vh;
+    font-size: 2rem !important;
+    margin-bottom: 5vh;
   }
   .process-card {
     padding: 18px;
