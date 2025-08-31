@@ -47,19 +47,21 @@
           <ul class="nav__list">
             <li class="nav__item"><a href="index.html" class="nav__link navbar-link active">Home</a></li>
 
+            <li class="nav__item"><a href="Security .html" class="nav__link navbar-link navbar-link-2">Services</a></li>
+            
             <li class="nav__item nav-dropdown">
-              <a href="#" class="nav__link navbar-link dropdown-toggle">
+              <a href="Security .html" class="nav__link navbar-link dropdown-toggle">
                 Services <span class="dropdown-arrow">▼</span>
               </a>
               <ul class="dropdown-menu">
-                <li><a href="Security.html#security" target="_blank" class="nav__link navbar-link navbar-link-1">Security Film</a></li>
-                <li><a href="Security.html#shutter" target="_blank" class="nav__link navbar-link">Security Shutters</a></li>
+                <li><a href="Security .html#security" class="nav__link navbar-link navbar-link-1">Security Film</a></li>
+                <li><a href="Security .html#shutter" class="nav__link navbar-link">Security Shutters</a></li>
               </ul>
             </li>
 
             <li class="nav__item"><a href="index.html#stat" class="nav__link navbar-link">About</a></li>
-            <li class="nav__item"><a href="contact.html#locations-section" target="_blank" class="nav__link navbar-link">Demo</a></li>
-            <li class="nav__item"><a href="contact.html#contact" target="_blank" class="nav__link navbar-link">Contact</a></li>
+            <li class="nav__item"><a href="contact.html#locations-section" class="nav__link navbar-link">Demo</a></li>
+            <li class="nav__item"><a href="contact.html#contact" class="nav__link navbar-link">Contact</a></li>
           </ul>
         </div>
 
@@ -71,49 +73,44 @@
             <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
           </div>
           <div class="cta-button-anim">
-          <a href="contact.html#contact" target="_blank" class="cta">Let's Chat →</a>
+          <a href="contact.html#contact" class="cta">Let's Chat →</a>
           </div>
         </div>
         
       </div>
     </nav>
   </header>
+
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  const dropdownToggle = document.querySelector(".dropdown-toggle");
-  const dropdownParent = dropdownToggle.closest(".nav-dropdown");
+document.addEventListener("DOMContentLoaded", function () {
   const navMenu = document.getElementById("nav-menu");
-  const navToggle = document.getElementById("nav-toggle");
 
-  // Toggle dropdown on click
-  dropdownToggle.addEventListener("click", function(e) {
-    e.preventDefault(); // stop link jump
-    e.stopPropagation(); // don't bubble to document
-    dropdownParent.classList.toggle("open");
-  });
+  // Find the top-level Services anchor specifically
+  const servicesLink = document.querySelector(".nav-dropdown > a.nav__link");
 
-  // Close dropdown if clicking outside dropdown
-  document.addEventListener("click", function(e) {
-    if (!dropdownParent.contains(e.target)) {
-      dropdownParent.classList.remove("open");
-    }
-  });
+  if (servicesLink) {
+    // Remove any previous listeners that might have called preventDefault
+    const clean = servicesLink.cloneNode(true);
+    servicesLink.parentNode.replaceChild(clean, servicesLink);
 
-  // Close nav if clicking outside nav (BUT ignore clicks on dropdown links)
-  document.addEventListener("click", function(e) {
-    if (
-      !navMenu.contains(e.target) && 
-      !e.target.closest("#nav-toggle")
-    ) {
-      navMenu.classList.remove("show");
-    }
-  });
+    // Optional: On desktop you can still toggle via hover in CSS, no JS needed.
+    // On mobile we do NOTHING here so the link navigates normally.
+  }
 
-  // Close nav when clicking any link inside nav (optional)
-  navMenu.querySelectorAll("a.nav__link").forEach(link => {
-    link.addEventListener("click", () => {
-      navMenu.classList.remove("show");
+  // Close the nav after any link click (do not prevent default)
+  if (navMenu) {
+    navMenu.querySelectorAll("a.nav__link").forEach(a => {
+      a.addEventListener("click", () => {
+        navMenu.classList.remove("show");
+      }, { passive: true });
     });
+  }
+
+  // Outside click closes the nav (doesn't block navigation)
+  document.addEventListener("click", function (e) {
+    if (!navMenu.contains(e.target) && !e.target.closest("#nav-toggle")) {
+      navMenu.classList.remove("show");
+    }
   });
 });
 </script>
@@ -122,10 +119,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+
+
+
+
   
 <section class="hero-section">
   <div class="hero-left">
-    <h1 class="hero-title title-animate">SHIELD<span style="margin-left: 3vh;"> X </span><span style="font-size: 15px; vertical-align: text-top; line-height: 3;">TM</span><br> DEFENSE</span></h1>
+    <h1 class="hero-title title-animate">SHIELD<span><img class="hero-left-image-x" src="photo/shield-defense-black-x.png"></span><br> DEFENSE</span></h1>
     <h2 class="hero-slogan title-animate">Defense that you can depend on</h2>
 
     <div class="hero-buttons title-animate">
