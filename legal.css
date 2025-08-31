@@ -10,7 +10,7 @@
 
 
 .header {
-  background-color: #000 !important;
+  background-color: #ffffff00 !important;
 }
 .header:hover {
   background-color: #111 !important;
@@ -34,7 +34,7 @@
   font-weight: 500;
 }
 .header:hover .socials-header a{
-  color: #ffffff;
+  color: #0081cc;
 }
 
 
@@ -63,7 +63,7 @@ body::before {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.873);
   z-index: 0;
   pointer-events: none; /* ✅ allows scroll through background */
 }
