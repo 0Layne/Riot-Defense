@@ -695,7 +695,7 @@ img {
   }
     .cta-button-anim {
     position: relative;
-    top: 17vh !important;
+    top: 15vh !important;
     left: 8%;
   }
   .logo-mobile{
@@ -1638,3 +1638,4 @@ padding-left: 10vh;
     left: 38%;
   }
 }
+
