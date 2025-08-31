@@ -244,20 +244,21 @@ img {
 }
 
 
-
 @media screen and (max-width: 1249px) {
-    .nav-dropdown .dropdown-menu {
-    position: static;   /* no absolute positioning */
-    background: none;   /* match mobile menu bg */
-    padding: 0.5rem 1rem;
-    border-radius: 0;
-    box-shadow: none;
-  }
+  .nav-dropdown .dropdown-menu { display: none !important; }
+  .nav-dropdown .dropdown-arrow { display: none !important; }
 
-  .nav-dropdown .dropdown-menu .nav__link {
-    color: white !important; /* match hamburger text */
-    font-size: 1.3rem;
-    padding: 0.5rem 0;
+  /* Make the whole Services row clickable and aligned */
+  .nav__item { width: 100%; }
+  .nav__link {
+    display: block !important;
+    width: 100% !important;   /* was 10% in your CSS – that shrinks the click target */
+    padding: 0.5rem 0 !important;
+    position: relative;
+    z-index: 1101;            /* above any overlays in the mobile nav */
+  }
+  .nav-dropdown{
+    display: none;
   }
   .nav {
     position: fixed;
@@ -394,24 +395,9 @@ img {
     background: white;
     color: black;
   }
-  .nav-dropdown .dropdown-menu {
-  display: none;
-  position: relative !important;
-  top: 5% !important;
-  background-color: #333;
-  color: #fff;
-  list-style: none;
-  margin: 0;
-  width: 20%;
-  padding: 1rem;
-  border-radius: 4px;
-  z-index: 1000;
-  transition: all 0.5s;
+
 }
-.dropdown-menu li{
-  width: 100%;
-}
-}
+
 @media screen and (max-width: 1248px) {
 
   .logo-mobile{
@@ -718,32 +704,7 @@ img {
 
 }
 
-@media screen and (max-width: 600px) {
-  .nav-social-wrapper {
-    display: flex !important;           /* horizontal layout */
-    flex-direction: row !important;     /* side by side */
-    justify-content: flex-end;          /* align everything to the right */
-    align-items: center;                /* vertical alignment */
-    position: relative;                 /* normal flow */
-    gap: 1rem;                          /* space between icons and button */
-    margin-top: 1rem;                   /* optional spacing from menu items */
-    width: 100%;                        /* ensure it fills the nav width */
-  }
 
-  .socials-header {
-    position: absolute;
-    bottom: 0px;
-    right: -5%;
-    flex-direction: row !important;
-    justify-content: flex-end;          /* align icons to the right */
-    gap: 0.5rem;                        /* spacing between icons */
-    margin: 0;                           /* remove any centering */
-  }
-
-  .cta-button-anim {
-    display: flex;
-  }
-}
 
 
 
@@ -1009,6 +970,9 @@ img {
 }
 
 @media screen and (min-width: 1250px) {
+  .navbar-link-2{
+    display: none;
+  }
   body {
     margin: 0;
   }
