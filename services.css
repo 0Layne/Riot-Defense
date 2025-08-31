@@ -9,16 +9,14 @@
 
 
 
-.header {
-  background-color: #ffffff !important;
-}
+
 .socials-header a{
-  color: #000 !important;
+  color: #0081cc !important;
 }
 .cta {
   background: transparent;
-  color: rgb(255, 255, 255) !important;
-  background-color: #000000 !important;
+  color: rgb(0, 0, 0) !important;
+   border: 0.5px solid rgb(0, 0, 0) !important;
   border: none;
   padding: 1rem 2rem;
   text-decoration: none;
