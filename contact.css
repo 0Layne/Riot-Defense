@@ -384,6 +384,7 @@ body{
   .process-content-block {
     padding: 0;
     margin-bottom: 5rem;
+    width: 90%;
   }
   .process-feature-content {
     margin: 0 auto;
@@ -443,6 +444,7 @@ body{
   .process-content-block {
     padding: 0;
     margin-bottom: 5rem;
+    width: 90%;
   }
   .process-feature-content {
     margin: 0 auto;
