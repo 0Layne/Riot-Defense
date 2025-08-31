@@ -27,13 +27,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Controls Safari/iOS status bar -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <!-- Modern browsers theme color -->
+    <meta name="theme-color" content="#0081cc">
 </head>
 <body>
     
-<!-- Header -->
 <header class="header transparent" id="main-header">
     <a href="#" class="header__logo">
-      <img src="photo/riot-logo-white.png" alt="Riot Logo" class="logo-mobile">
+      <img src="photo/shield-defense-logo-white.png" alt="Riot Logo" class="logo-mobile">
     </a>
 
     <ion-icon name="menu-outline" class="header__toggle" id="nav-toggle"></ion-icon>
@@ -44,13 +49,26 @@
         <ion-icon name="close-outline" class="nav__close" id="nav-close"></ion-icon>
 
         <div class="header-left">
-          <img src="photo/riot-logo-shield-white.svg" alt="Riot Logo" class="logo" />
+          <img src="photo/shield-defense-logo-white.png" alt="Riot Logo" class="logo" />
+          <img src="photo/shield-defense-logo-white.png" alt="Riot Logo" class="logo-1" />
           <ul class="nav__list">
             <li class="nav__item"><a href="index.html" class="nav__link navbar-link active">Home</a></li>
-            <li class="nav__item"><a href="index.html#service" class="nav__link navbar-link">Film</a></li>
-            <li class="nav__item"><a href="contact.html" class="nav__link navbar-link">Customers</a></li>
-            <li class="nav__item"><a href="contact.html#faq" target="_blank" class="nav__link navbar-link">FAQ</a></li>
-            <li class="nav__item"><a href="contact.html#contact" target="_blank" class="nav__link navbar-link">Contact</a></li>
+
+            <li class="nav__item"><a href="Security .html" class="nav__link navbar-link navbar-link-2">Services</a></li>
+            
+            <li class="nav__item nav-dropdown">
+              <a href="Security .html" class="nav__link navbar-link dropdown-toggle">
+                Services <span class="dropdown-arrow">▼</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="Security .html#security" class="nav__link navbar-link navbar-link-1">Security Film</a></li>
+                <li><a href="Security .html#shutter" class="nav__link navbar-link">Security Shutters</a></li>
+              </ul>
+            </li>
+
+            <li class="nav__item"><a href="index.html#stat" class="nav__link navbar-link">About</a></li>
+            <li class="nav__item"><a href="contact.html#locations-section" class="nav__link navbar-link">Demo</a></li>
+            <li class="nav__item"><a href="contact.html#contact" class="nav__link navbar-link">Contact</a></li>
           </ul>
         </div>
 
@@ -62,13 +80,47 @@
             <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
           </div>
           <div class="cta-button-anim">
-          <a href="contact.html#contact" target="_blank" class="cta">Get a Quote →</a>
+          <a href="contact.html#contact" class="cta">Let's Chat →</a>
           </div>
         </div>
         
       </div>
     </nav>
   </header>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const navMenu = document.getElementById("nav-menu");
+
+  // Find the top-level Services anchor specifically
+  const servicesLink = document.querySelector(".nav-dropdown > a.nav__link");
+
+  if (servicesLink) {
+    // Remove any previous listeners that might have called preventDefault
+    const clean = servicesLink.cloneNode(true);
+    servicesLink.parentNode.replaceChild(clean, servicesLink);
+
+    // Optional: On desktop you can still toggle via hover in CSS, no JS needed.
+    // On mobile we do NOTHING here so the link navigates normally.
+  }
+
+  // Close the nav after any link click (do not prevent default)
+  if (navMenu) {
+    navMenu.querySelectorAll("a.nav__link").forEach(a => {
+      a.addEventListener("click", () => {
+        navMenu.classList.remove("show");
+      }, { passive: true });
+    });
+  }
+
+  // Outside click closes the nav (doesn't block navigation)
+  document.addEventListener("click", function (e) {
+    if (!navMenu.contains(e.target) && !e.target.closest("#nav-toggle")) {
+      navMenu.classList.remove("show");
+    }
+  });
+});
+</script>
 
 
 
@@ -77,10 +129,10 @@
 <section class="legal-page">
 <div class="legal-cont">
   <h1>Legal Disclaimer</h1>
-  <p>All content provided on this website is for informational purposes only. RiotDefense makes no representations as to the accuracy or completeness of any information on this site or found by following any link on this site.</p>
-  <p>RiotDefense will not be liable for any errors or omissions in this information nor for the availability of this information. RiotDefense will not be liable for any losses, injuries, or damages from the display or use of this information.</p>
+  <p>All content provided on this website is for informational purposes only. SHIELD X DEFENSE makes no representations as to the accuracy or completeness of any information on this site or found by following any link on this site.</p>
+  <p>SHIELD X DEFENSE will not be liable for any errors or omissions in this information nor for the availability of this information. SHIELD X DEFENSE will not be liable for any losses, injuries, or damages from the display or use of this information.</p>
   <p>All products and services are provided “as-is” without warranties of any kind, either express or implied. It is the responsibility of the property owner to comply with local laws and ordinances regarding the use of safety or security window film products.</p>
-  <p>By using this website and/or any RiotDefense services, you accept this disclaimer in full. If you disagree with any part of this disclaimer, do not use our website, products, or services.</p>
+  <p>By using this website and/or any SHIELD X DEFENSE services, you accept this disclaimer in full. If you disagree with any part of this disclaimer, do not use our website, products, or services.</p>
 </div>
 </section>
 </main>
